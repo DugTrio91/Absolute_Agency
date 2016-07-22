@@ -1,0 +1,503 @@
+* {
+    margin: 0px auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*--TYPOGRAPHY--*/
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h2 {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.1em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: 200;
+}
+
+
+
+
+/*--HEADER--*/
+#menu a:hover {
+    color: #7bddd8;
+}
+
+header {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+}
+
+.navigation {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    margin-top: -20px;
+    height:110px;
+
+}
+
+.logo {
+    background: url(../images/absolute_logo.png) top right no-repeat;
+    background-size: 260%;
+    -webkit-background-size: 260%;
+    -moz-background-size: 260%;
+    -o-background-size: 260%;
+    height: 50px;
+    width: 330px;
+    opacity: 1;
+    margin-top: 27px;
+    margin-left: -250px;
+    padding: 25px 0px 0px 10px;
+    filter: opacity(90%);
+    transition: background-size 0.1s, margin 0.1s, width 0.1s;
+}
+
+.logo:hover {
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+-webkit-transform: translate(5,5);
+    -moz-transform: translate(5,5);
+    -o-transform: translate(5,5);
+    -ms-transform: translate(5,5);
+    transform: translate(5,5);
+    margin:40px 0px 0px 20px;
+    width: 200px;
+}
+
+/*--SLIDING MENU--*/
+
+hr {
+    margin: 20px 20px 20px -25px;
+    border: 1px solid #3a3a3a;
+}
+
+#icon-menu {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #7bddd8;
+    top: 20px;
+    right: 20px;
+}
+
+#icon-menu span {
+    display: block;
+    width: 23px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    /* same as the height */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    position: absolute;
+    left: 13px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#icon-menu span:nth-child(1) {
+    top: 14px;
+}
+
+#icon-menu span:nth-child(2) {
+    top: 23px;
+}
+
+#icon-menu span:nth-child(3) {
+    top: 32px;
+}
+
+#menu {
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    /* negative value of the width */
+    background: #222;
+    z-index: 98;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    overflow-y: scroll;
+}
+
+#menu ul {
+    margin-top: 50px;
+}
+
+#menu ul li {
+    list-style: none;
+    display: block;
+    position: relative;
+    left: 100px;
+    opacity: 0;
+    -webkit-transition: left 0.2s ease, opacity 0.2s ease;
+    -moz-transition: left 0.2s ease, opacity 0.2s ease;
+    -o-transition: left 0.2s ease, opacity 0.2s ease;
+    transition: left 0.2s ease, opacity 0.2s ease;
+    padding: 10px 40px;
+    color: #ecf0f1;
+}
+
+.contact-link {
+    font-size: 0.9rem;
+    color: #ecf0f1;
+}
+
+.contact-link a {
+    color: #2ecc71;
+    text-decoration: underline;
+}
+
+#menu ul li ul {
+    margin: 0;
+}
+
+.social-links {
+    font-size: 0;
+    margin-left: -50px;
+}
+
+.social-links li {
+    display: inline-block !important;
+    padding: 0 !important;
+    width: 44px;
+    height: 44px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.social-links li a {
+    display: block;
+    width: inherit;
+    height: inherit;
+    color: white;
+}
+
+.social-links li a:hover {
+    background: #111;
+}
+
+video, .video-gradient-layer {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.video-gradient-layer{
+    position: relative;
+    z-index: 2 !important;
+    background-color: white;
+    margin-top:-605px;
+    filter: opacity(40%)
+}
+
+.introduction-section{
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    top:-400px;
+    color: #111;
+    font-weight: 300;
+}
+
+.introduction-section img{
+    height:40px;
+}
+
+.introduction-section-link a{
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+.introduction-section-link a:hover:not(.introduction-section-link a:last-child){
+    color: #7bddd8;
+}
+
+.introduction-section-link a:last-child{
+    font-size: 0.8em;
+    padding:15px;
+    background-color: black;
+}
+.introduction-section-link a:last-child:hover{
+    font-size: 0.8em;
+    padding:15px;
+    background-color: #7bddd8;
+}
+
+/*--WORK PAGE--*/
+.work-container{
+    margin:0px auto;
+    text-align: center;
+}
+
+.portfolio-image-container{
+    position: relative;
+    z-index: 1;
+    height:300px;
+    width:400px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+}
+
+.portfolio-image-container img{
+    height: 300px;
+}
+
+.portfolio-text-container{
+    position: relative;
+    z-index: 99;
+    height:100%;
+    margin-top: -304px;
+    background:url(images/portfolio-container-cover.png) top center no-repeat;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
+
+.portfolio-text-label{
+    position: relative;
+    top:130px;
+    width: 200px;
+    border-radius: 50px/50px;
+    color: whitesmoke;
+    background-color: black;
+    padding:10px;
+}
+
+
+.portfolio-image-container:hover img{
+    transition: all .2s ease-in-out;
+    transform: scale(1.05);
+    
+}
+
+.portfolio-image-container:hover .portfolio-text-container{
+    opacity: 0.9;    
+}
+
+
+
+
+
+
+/*--CASE STUDY MENU--*/
+#case-study-menu{
+    position: absolute;
+    top: 100vh;
+    left: 50px;
+    width: 15%;
+    min-width: 180px;
+    background: white;
+    box-shadow: 0 3px 5px #ccc;
+    padding: 4% 20px;
+    filter: opacity(90%);
+    z-index: 99;
+}
+
+#case-study-menu span{
+    font-size: 1.4em;
+}
+
+#case-study-menu hr{
+    border-style: dashed;
+    border-color: #ddd;
+    margin: 10px 0;
+}
+
+#case-study-menu a{
+    text-decoration: none;
+    color: gray;
+    display: block;
+    line-height: 1.5;
+}
+#case-study-menu .active{
+    color: black;
+}
+#case-study-menu .active:after{
+    font-family: FontAwesome;
+    content: ' \f0d9';
+}
+
+
+
+
+
+
+
+.cover-gradient {
+    height: 100vh;
+    margin-bottom: -100vh;
+    background-color: #383838;
+    opacity: 0.9;
+    filter: opacity(90%);
+}
+
+.cover {
+    position: relative;
+    top: 30vh;
+    height: 40vh;
+    width: 45vw;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cover-logo {
+    background: url(../images/Black_Mulberry_logo.png) center no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -ms-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    border-right: 1px solid white;
+}
+
+.cover-text h2 {
+    padding-top: 16vh;
+    padding-left: 15px;
+    color: whitesmoke;
+}
+
+.mulberry-container1 {
+    height: 100vh !important;
+    background: url(../images/Black_Mulberry_Window.jpg) top no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+
+.splitcontainer-upper {
+    padding: 10%;
+    margin-left:230px;
+}
+
+.splitcontainer-upper p {
+    line-height: 35px;
+    max-width: 1000px;
+}
+
+.splitcontainer-lower{
+    height:500px;    
+}
+
+/*.container:not(.mulberry-container1){
+    opacity: 0;
+    transition: opacity 1.3s;
+}*/
+.mulberry-container2-lower {
+    background: url(../images/Black_Mulberry_Menu.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.mulberry-container3-lower {
+    background: url(../images/Black_Mulberry_Invitation_Design.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.mulberry-container4 {
+    height:100vh;
+    background: url(../images/Black_Mulberry_Logo_Design-Absolute.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.mulberry-container5-lower {
+    background: url(../images/Black_Mulberry_Loyalty_Card_Design-.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.mulberry-container6 h2{
+    text-align: center;
+    padding:10%;   
+}
+
+form {
+    margin: auto;
+    text-align: center;
+    max-width: 800px;
+    padding-bottom: 100px;
+}
+
+::-webkit-input-placeholder{
+    color: black;
+    font-style: italic;
+}
+
+input,textarea {
+    width: 75%;
+    height: 37px;
+    background: whitesmoke;
+    font-size: 18px;
+    border: none;
+    outline: 0;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+textarea {
+    height: 113px !important;
+    margin-right: -4px;
+    resize: none;
+}
+
+#submit{
+    width: 77%;
+    height:60px;
+    background-color: #757575;
+    color: white;
+    margin-left:-5px;
+}
+
+#submit:hover{
+    opacity: 0.9;
+    filter: opacity(90%);
+}
+
