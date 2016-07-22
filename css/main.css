@@ -39,6 +39,51 @@ hr {
 
 
 
+/*--FORMS--*/
+form {
+    margin: auto;
+    text-align: center;
+    max-width: 800px;
+    padding-bottom: 100px;
+}
+
+::-webkit-input-placeholder{
+    color: black;
+    font-style: italic;
+}
+
+input, textarea {
+    width: 75%;
+    height: 37px;
+    background: whitesmoke;
+    font-size: 18px;
+    border: none;
+    outline: 0;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+textarea {
+    height: 113px !important;
+    margin-right: -4px;
+    resize: none;
+}
+
+#submit{
+    width: 77%;
+    height:60px;
+    background-color: #757575;
+    color: white;
+    margin-left:-5px;
+}
+
+#submit:hover{
+    opacity: 0.9;
+    filter: opacity(90%);
+}
+
+
+
 /*--OFF SCREEN NAVIGATION--*/
 #menu {
     height: 100vh;
@@ -440,46 +485,4 @@ video, .video-gradient-layer {
 .mulberry-container6 h2{
     text-align: center;
     padding:10%;   
-}
-
-form {
-    margin: auto;
-    text-align: center;
-    max-width: 800px;
-    padding-bottom: 100px;
-}
-
-::-webkit-input-placeholder{
-    color: black;
-    font-style: italic;
-}
-
-input,textarea {
-    width: 75%;
-    height: 37px;
-    background: whitesmoke;
-    font-size: 18px;
-    border: none;
-    outline: 0;
-    padding: 10px;
-    margin: 20px 0px;
-}
-
-textarea {
-    height: 113px !important;
-    margin-right: -4px;
-    resize: none;
-}
-
-#submit{
-    width: 77%;
-    height:60px;
-    background-color: #757575;
-    color: white;
-    margin-left:-5px;
-}
-
-#submit:hover{
-    opacity: 0.9;
-    filter: opacity(90%);
 }
