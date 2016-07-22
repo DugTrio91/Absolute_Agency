@@ -31,7 +31,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="tel:07740988831">
+                            <a href="tel:07740988831" title="Call us">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                              </a>
                         </li>
