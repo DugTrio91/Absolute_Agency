@@ -6,7 +6,6 @@
 
 
 
-
 /*--TYPOGRAPHY--*/
 body{
     font-family: "Open Sans", sans-serif;
@@ -32,12 +31,14 @@ p {
 
 
 
-
-/*--HEADER--*/
+/*--OFF SCREEN NAVIGATION--*/
 #menu a:hover {
     color: #7bddd8;
 }
 
+
+
+/*--START OF ON SCREEN CONTENT--*/
 header {
     position: fixed;
     z-index: 99;
@@ -47,16 +48,8 @@ header {
     width: 100%;
 }
 
-.navigation {
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    margin-top: -20px;
-    height:110px;
-
-}
-
 .logo {
+    display: block;
     background: url(../images/absolute_logo.png) top right no-repeat;
     background-size: 260%;
     -webkit-background-size: 260%;
@@ -64,11 +57,12 @@ header {
     -o-background-size: 260%;
     height: 50px;
     width: 330px;
-    opacity: 1;
-    margin-top: 27px;
+    margin-top: 20px;
     margin-left: -250px;
     padding: 25px 0px 0px 10px;
-    filter: opacity(90%);
+    -webkit-transition: background-size 0.1s, margin 0.1s, width 0.1s;
+    -moz-transition: background-size 0.1s, margin 0.1s, width 0.1s;
+    -o-transition: background-size 0.1s, margin 0.1s, width 0.1s;
     transition: background-size 0.1s, margin 0.1s, width 0.1s;
 }
 
@@ -77,17 +71,18 @@ header {
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
--webkit-transform: translate(5,5);
-    -moz-transform: translate(5,5);
-    -o-transform: translate(5,5);
-    -ms-transform: translate(5,5);
-    transform: translate(5,5);
-    margin:40px 0px 0px 20px;
+    -webkit-transform: translate(5, 5);
+    -moz-transform: translate(5, 5);
+    -o-transform: translate(5, 5);
+    -ms-transform: translate(5, 5);
+    transform: translate(5, 5);
+    margin: 40px 0px 0px 20px;
     width: 200px;
 }
 
-/*--SLIDING MENU--*/
 
+
+/*--SLIDING MENU--*/
 hr {
     margin: 20px 20px 20px -25px;
     border: 1px solid #3a3a3a;
