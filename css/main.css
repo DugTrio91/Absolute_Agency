@@ -33,7 +33,7 @@ p {
 
 /*--BASE TAG STYLES--*/
 hr {
-    margin: 20px 20px 20px -25px;
+    margin: 20px 0;
     border: 1px solid #3a3a3a;
 }
 
@@ -79,11 +79,8 @@ hr {
     color: #ecf0f1;
 }
 
-
-
 .social-links {
     font-size: 0;
-    margin-left: 0px;
 }
 
 .social-links li {
@@ -91,7 +88,7 @@ hr {
     padding: 0 !important;
     width: 44px;
     height: 44px;
-    line-height: 42px;
+    line-height: 44px;
     text-align: center;
     font-size: 1.4rem;
 }
