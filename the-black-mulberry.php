@@ -10,14 +10,14 @@
 ?>
 
     <div id="case-study-menu">
-        <span id="case-study-menu-title">Intro</span>
+        <span id="case-study-menu-title">Cover</span>
         <hr />
-        <a href="#container1" class="" title="Intro">Cover</a>
-        <a href="#container2" title="">Introduction</a>
-        <a href="#container3" title="">About the Client</a>
-        <a href="#container4" title="">Logo</a>
-        <a href="#container5" title="">Design</a>
-        <a href="#container6" title="">Contact</a>
+        <a title="Cover">Cover</a>
+        <a title="Introduction">Introduction</a>
+        <a title="About the Client">About the Client</a>
+        <a title="Logo">Logo</a>
+        <a title="Design">Design</a>
+        <a title="Contact">Contact</a>
     </div>
 
     <div class="case-study">

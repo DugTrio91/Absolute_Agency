@@ -1,4 +1,11 @@
-//get elements
+//global variables
+var yPos;
+var height = window.innerHeight;
+var scrollSpeed = 15;
+
+
+
+//toggle menu
 var iconMenu = document.getElementById("icon-menu");
 var iconMenuBars = iconMenu.getElementsByTagName("span");
 var menu = document.getElementById("menu");
@@ -87,14 +94,7 @@ iconMenu.addEventListener("click", toggleMenu);
 
 
 
-
-
-
-
-
-
-var yPos;
-var height = window.innerHeight;
+//have portfolio menu follow user down the page
 var allowance = 100;
 
 var casemenu = document.getElementById("case-study-menu");
@@ -113,13 +113,6 @@ var sections = [
 function isVisible(section) {
     if (yPos + allowance > section.offsetTop) return true;
     return false;
-}
-
-function stringify(num) {
-    if (num < 10) {
-        num = String("0" + num + ".");
-    }
-    return num;
 }
 
 function adjustCaseMenu() {
@@ -141,9 +134,7 @@ function adjustCaseMenu() {
             for (var j = 0; j < casemenuLinks.length; j++) {
                 casemenuLinks[j].className = "";
             }
-
             sections[i].style.opacity = "1";
-
             casemenuLinks[i].className = "active";
         }
     }
@@ -153,9 +144,35 @@ window.addEventListener("scroll", adjustCaseMenu);
 
 
 
+//animate scrolling to destination when chosen link is clicked
+function scrollDirection(target){
+    //determine whether to go up or down
+    var direction = yPos > target.offsetTop ? -1 : 1;
+    animateScroll(target, direction);
+}
 
+function animateScroll(target, direction){
 
+    //recur
+    var interval = window.setTimeout(function(){
+        animateScroll(target, direction);
+    }, 1);
 
+    //work out if scrolling should stop
+    if(direction === 1 && yPos >= target.offsetTop){
+        clearTimeout(interval);
+    } else if(direction === -1 && yPos <= target.offsetTop){
+        clearTimeout(interval);
+    } else {
+        //else scroll
+        window.scrollBy(0, scrollSpeed * direction);
+    }
 
+}
 
-
+casemenuLinks[0].addEventListener("click", function(){ scrollDirection(sections[0]); });
+casemenuLinks[1].addEventListener("click", function(){ scrollDirection(sections[1]); });
+casemenuLinks[2].addEventListener("click", function(){ scrollDirection(sections[2]); });
+casemenuLinks[3].addEventListener("click", function(){ scrollDirection(sections[3]); });
+casemenuLinks[4].addEventListener("click", function(){ scrollDirection(sections[4]); });
+casemenuLinks[5].addEventListener("click", function(){ scrollDirection(sections[5]); });
