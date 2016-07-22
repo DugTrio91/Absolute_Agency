@@ -25,7 +25,7 @@ h2 {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 200;
 }
 
@@ -107,7 +107,7 @@ textarea {
 }
 
 #menu > ul {
-    padding: 50px;
+    padding: 80px 50px;
 }
 
 #menu ul li {
@@ -243,7 +243,7 @@ header {
 /*--HOME PAGE--*/
 video, .video-gradient-layer {
     width: 100%;
-    height: 600px;
+    height: 100vh;
     object-fit: cover;
     z-index: 1;
 }
@@ -252,7 +252,7 @@ video, .video-gradient-layer {
     position: relative;
     z-index: 2 !important;
     background-color: white;
-    margin-top:-605px;
+    margin-top:-100.6vh;
     filter: opacity(40%)
 }
 
@@ -260,22 +260,26 @@ video, .video-gradient-layer {
     position: relative;
     text-align: center;
     z-index: 3;
-    top:-400px;
+    top:-70vh;
     color: #111;
     font-weight: 300;
 }
 
 .introduction-section img{
-    height:40px;
+    height:60px;
+    margin-bottom: 25px;
+    text-shadow: -1px -1px 6px rgba(150, 150, 150, 1);
 }
 
 .introduction-section-link a{
-    transition: all .25s ease-in-out;
-    -moz-transition: all .25s ease-in-out;
-    -webkit-transition: all .25s ease-in-out;
+    line-height: 20px;
+}
+.introduction-section-link a:first-child{
+     margin-right: 15px;   
 }
 .introduction-section-link a:hover:not(.introduction-section-link a:last-child){
-    color: #7bddd8;
+    padding-bottom: 5px;
+    border-bottom: 0.5px #fff solid;
 }
 
 .introduction-section-link a:last-child{
@@ -287,6 +291,10 @@ video, .video-gradient-layer {
     font-size: 0.8em;
     padding:15px;
     background-color: #7bddd8;
+}
+
+.mobile-br{
+    display: none;
 }
 
 
@@ -486,4 +494,15 @@ video, .video-gradient-layer {
 .mulberry-container6 h2{
     text-align: center;
     padding:10%;   
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-br{
+        display: block;
+    }
+    
+    .introduction-section-link a:first-child{
+        margin-right: 0px;
+        padding-bottom: 15px;
+}
 }

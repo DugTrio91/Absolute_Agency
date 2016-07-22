@@ -6,8 +6,7 @@
     function linkify($title){
         $lower = strtolower($title);
         return str_replace(" ", "-", $lower) . ".php";
-    }
-    
+    }    
 ?>
 
 <div class="work-container">
