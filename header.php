@@ -23,7 +23,7 @@
             <li><hr /></li>
             <li class="social-links">
                 <ul>
-                   <li class="contact-link">
+                   <li>
                         <a href="mailto:hello@absolute-agency.co.uk" title="Email us">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </a>

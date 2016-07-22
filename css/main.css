@@ -78,16 +78,6 @@ hr {
     color: #ecf0f1;
 }
 
-.contact-link {
-    font-size: 0.9rem;
-    color: #ecf0f1;
-}
-
-.contact-link a {
-    color: #2ecc71;
-    text-decoration: underline;
-}
-
 #menu ul li ul {
     margin: 0;
 }
