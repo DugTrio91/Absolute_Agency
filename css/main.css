@@ -67,14 +67,15 @@ textarea {
     height: 113px !important;
     margin-right: -4px;
     resize: none;
+    -moz-resize: none;
 }
 
 #submit{
     width: 77%;
-    height:60px;
+    height: 60px;
     background-color: #757575;
     color: white;
-    margin-left:-5px;
+    cursor: pointer;
 }
 
 #submit:hover{
