@@ -31,114 +31,22 @@ p {
 
 
 
-/*--OFF SCREEN NAVIGATION--*/
-#menu a:hover {
-    color: #7bddd8;
-}
-
-
-
-/*--START OF ON SCREEN CONTENT--*/
-header {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-}
-
-.logo {
-    display: block;
-    background: url(../images/absolute_logo.png) top right no-repeat;
-    background-size: 260%;
-    -webkit-background-size: 260%;
-    -moz-background-size: 260%;
-    -o-background-size: 260%;
-    height: 50px;
-    width: 330px;
-    margin-top: 20px;
-    margin-left: -250px;
-    padding: 25px 0px 0px 10px;
-    -webkit-transition: background-size 0.1s, margin 0.1s, width 0.1s;
-    -moz-transition: background-size 0.1s, margin 0.1s, width 0.1s;
-    -o-transition: background-size 0.1s, margin 0.1s, width 0.1s;
-    transition: background-size 0.1s, margin 0.1s, width 0.1s;
-}
-
-.logo:hover {
-    background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    -webkit-transform: translate(5, 5);
-    -moz-transform: translate(5, 5);
-    -o-transform: translate(5, 5);
-    -ms-transform: translate(5, 5);
-    transform: translate(5, 5);
-    margin: 40px 0px 0px 20px;
-    width: 200px;
-}
-
-
-
-/*--SLIDING MENU--*/
+/*--BASE TAG STYLES--*/
 hr {
     margin: 20px 20px 20px -25px;
     border: 1px solid #3a3a3a;
 }
 
-#icon-menu {
-    display: block;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    background-color: #7bddd8;
-    top: 20px;
-    right: 20px;
-}
 
-#icon-menu span {
-    display: block;
-    width: 23px;
-    height: 3px;
-    background: #fff;
-    border-radius: 3px;
-    /* same as the height */
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -o-border-radius: 4px;
-    position: absolute;
-    left: 13px;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-}
 
-#icon-menu span:nth-child(1) {
-    top: 14px;
-}
-
-#icon-menu span:nth-child(2) {
-    top: 23px;
-}
-
-#icon-menu span:nth-child(3) {
-    top: 32px;
-}
-
+/*--OFF SCREEN NAVIGATION--*/
 #menu {
     height: 100vh;
     width: 300px;
     position: fixed;
     top: 0;
     right: -300px;
-    /* negative value of the width */
+    /* right should be negative value of the width */
     background: #222;
     z-index: 98;
     -webkit-transition: all 0.2s ease;
@@ -146,6 +54,10 @@ hr {
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
     overflow-y: scroll;
+}
+
+#menu a:hover {
+    color: #7bddd8;
 }
 
 #menu ul {
@@ -205,6 +117,96 @@ hr {
 .social-links li a:hover {
     background: #111;
 }
+
+
+
+/*--START OF ON SCREEN CONTENT--*/
+header {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+}
+
+.logo {
+    display: block;
+    background: url(../images/absolute_logo.png) top right no-repeat;
+    background-size: 260%;
+    -webkit-background-size: 260%;
+    -moz-background-size: 260%;
+    -o-background-size: 260%;
+    height: 50px;
+    width: 330px;
+    margin-top: 20px;
+    margin-left: -250px;
+    padding: 25px 0px 0px 10px;
+    -webkit-transition: background-size 0.1s, margin 0.1s, width 0.1s;
+    -moz-transition: background-size 0.1s, margin 0.1s, width 0.1s;
+    -o-transition: background-size 0.1s, margin 0.1s, width 0.1s;
+    transition: background-size 0.1s, margin 0.1s, width 0.1s;
+}
+
+.logo:hover {
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-transform: translate(5, 5);
+    -moz-transform: translate(5, 5);
+    -o-transform: translate(5, 5);
+    -ms-transform: translate(5, 5);
+    transform: translate(5, 5);
+    margin: 40px 0px 0px 20px;
+    width: 200px;
+}
+
+#icon-menu {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #7bddd8;
+    top: 20px;
+    right: 20px;
+}
+
+#icon-menu span {
+    display: block;
+    width: 23px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    /* border radius should be same as the height */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    position: absolute;
+    left: 13px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#icon-menu span:nth-child(1) {
+    top: 14px;
+}
+
+#icon-menu span:nth-child(2) {
+    top: 23px;
+}
+
+#icon-menu span:nth-child(3) {
+    top: 32px;
+}
+
+
 
 video, .video-gradient-layer {
     width: 100%;
