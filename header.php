@@ -14,7 +14,6 @@
 
 <body>
     <div class="navigation">
-        <div class="logo" onclick="location.href='index.php';" style="cursor: pointer;"></div>
         <nav id="menu">
             <ul>
                 <li><a href="#" title="Home">Home</a></li>
@@ -23,10 +22,7 @@
                 <li><a href="#" title="Services">Services</a></li>
                 <li><a href="#" title="Blog">Blog</a></li>
                 <li><a href="#" title="Contact">Contact</a></li>
-                <li>
-                    <hr />
-         
-                </li>
+                <li><hr /></li>
                 <li class="social-links">
                     <ul>
                        <li class="contact-link">
@@ -66,6 +62,7 @@
         </nav>
 
         <header>
+            <div class="logo" onclick="location.href='index.php';" style="cursor: pointer;"></div>
             <a id="icon-menu" title="Toggle Menu">
                 <span></span>
                 <span></span>

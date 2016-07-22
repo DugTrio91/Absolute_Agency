@@ -99,7 +99,6 @@ var height = window.innerHeight;
 var allowance = 100;
 
 var casemenu = document.getElementById("case-study-menu");
-document.getElementById("case-study-menu").style.background = "red";
 var casemenuTitle = document.getElementById("case-study-menu-title");
 var casemenuLinks = casemenu.getElementsByTagName("a");
 
