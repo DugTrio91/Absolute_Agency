@@ -60,7 +60,7 @@
 
     <!-- start of on screen content -->
     <header>
-        <div class="logo" onclick="location.href='index.php';" style="cursor: pointer;"></div>
+        <a class="logo" href="index.php" title="Home"></a>
         <a id="icon-menu" title="Toggle Menu">
             <span></span>
             <span></span>
