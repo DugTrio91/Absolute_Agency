@@ -26,7 +26,7 @@
                 <li class="social-links">
                     <ul>
                        <li class="contact-link">
-                            <a href=mailto:hello@absolute-agency.co.uk>
+                            <a href="mailto:hello@absolute-agency.co.uk" title="Email us">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                             </a>
                         </li>
