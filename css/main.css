@@ -194,6 +194,7 @@ header {
 
 
 
+/*--HOME PAGE--*/
 video, .video-gradient-layer {
     width: 100%;
     height: 600px;
@@ -241,6 +242,8 @@ video, .video-gradient-layer {
     padding:15px;
     background-color: #7bddd8;
 }
+
+
 
 /*--WORK PAGE--*/
 .work-container{
@@ -298,9 +301,6 @@ video, .video-gradient-layer {
 
 
 
-
-
-
 /*--CASE STUDY MENU--*/
 #case-study-menu{
     position: absolute;
@@ -331,19 +331,15 @@ video, .video-gradient-layer {
     display: block;
     line-height: 1.5;
 }
+
 #case-study-menu .active{
     color: black;
 }
+
 #case-study-menu .active:after{
     font-family: FontAwesome;
     content: ' \f0d9';
 }
-
-
-
-
-
-
 
 .cover-gradient {
     height: 100vh;
@@ -404,10 +400,6 @@ video, .video-gradient-layer {
     height:500px;    
 }
 
-/*.container:not(.mulberry-container1){
-    opacity: 0;
-    transition: opacity 1.3s;
-}*/
 .mulberry-container2-lower {
     background: url(../images/Black_Mulberry_Menu.jpg) center no-repeat;
     -webkit-background-size: cover;
@@ -491,4 +483,3 @@ textarea {
     opacity: 0.9;
     filter: opacity(90%);
 }
-
