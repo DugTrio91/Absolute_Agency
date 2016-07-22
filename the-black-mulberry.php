@@ -1,7 +1,6 @@
 <?php
     $title =  "The Black Mulberry | Absolute Agency";
     include_once "header.php";
-    include_once("scripts/connector.php");
 
     function linkify($title){
         $lower = strtolower($title);

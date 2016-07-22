@@ -1,3 +1,5 @@
+<?php include_once "scripts/connector.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
