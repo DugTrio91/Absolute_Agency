@@ -7,13 +7,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css" />
-    <title>
-        <?php echo $title; ?>
-    </title>
+    <title><?php echo $title; ?></title>
 </head>
 
 <body>
-    <div class="navigation">
         <nav id="menu">
             <ul>
                 <li><a href="index.php" title="Home">Home</a></li>
@@ -69,5 +66,4 @@
                 <span></span>
             </a>
         </header>
-    </div>
     <script src="scripts/main.js"></script>

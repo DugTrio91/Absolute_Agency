@@ -6,6 +6,7 @@
 
 
 
+
 /*--TYPOGRAPHY--*/
 body{
     font-family: "Open Sans", sans-serif;
@@ -51,7 +52,8 @@ header {
     z-index: 99;
     width: 100%;
     margin-top: -20px;
-    height: 110px;
+    height:110px;
+
 }
 
 .logo {
