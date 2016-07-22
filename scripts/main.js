@@ -51,7 +51,6 @@ function openMenu() {
         iconMenuBars[2].style.msTransform = "rotate(-45deg)";
     iconMenuBars[2].style.top = "34px";
 
-
 }
 
 function closeMenu() {
@@ -150,4 +149,13 @@ function adjustCaseMenu() {
     }
 }
 
-window.addEventListener("scroll", adjustCaseMenu); 
+window.addEventListener("scroll", adjustCaseMenu);
+
+
+
+
+
+
+
+
+
