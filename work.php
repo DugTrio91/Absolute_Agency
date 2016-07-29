@@ -1,7 +1,6 @@
 <?php
-    $title = "Absolute Agency | Creative marketing and design Newcastle upon Tyne | Gateshead | Design | Web Design | Branding | Logo Design";
+    $title = "Absolute Agency | Our Work";
     include_once "header.php";
-    include_once("scripts/connector.php");
 
     function linkify($title){
         $lower = strtolower($title);
@@ -12,19 +11,19 @@
 <div class="work-container">
    <?php 
 
-				$sql = "SELECT * FROM portfolioList";
-				$result = mysqli_query($dbconnect, $sql);
+        $sql = "SELECT * FROM portfolioList ORDER BY portfolioText ASC";
+        $result = mysqli_query($dbconnect, $sql);
 
-				while($row = mysqli_fetch_array($result)){
+		while($row = mysqli_fetch_array($result)){
                     
-                    echo "<div class='portfolio-image-container'>";
-				    echo "<img src='" .  $row["portfolioImage"] . "'/>";
-                    echo "<div class='portfolio-text-container'>";
-                    echo "<a href='" . linkify($row["portfolioText"]) . "'>","<h3 class='portfolio-text-label'>" . $row["portfolioText"] . "</h3></a>";
-                    echo "</div></div>";
-				}
-
-				 ?> 
+            echo "<div class='portfolio-image-container'>";
+			echo "<a href='" . linkify($row["portfolioText"]) . "'>";
+            echo "<img src='" .  $row["portfolioImage"] . "'/>";
+            echo "<div class='portfolio-text-container'>";
+            echo "<h4 class='portfolio-text-label'>" . $row["portfolioText"] . "</h4></a>";
+            echo "</div></div>";
+        }
+    ?> 
     </div>
 </body>
 </html>

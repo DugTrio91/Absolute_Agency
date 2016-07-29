@@ -1,7 +1,7 @@
 //global variables
 var yPos;
 var height = window.innerHeight;
-var scrollSpeed = 15;
+var scrollSpeed = 75;
 
 
 
@@ -176,3 +176,4 @@ casemenuLinks[2].addEventListener("click", function(){ scrollDirection(sections[
 casemenuLinks[3].addEventListener("click", function(){ scrollDirection(sections[3]); });
 casemenuLinks[4].addEventListener("click", function(){ scrollDirection(sections[4]); });
 casemenuLinks[5].addEventListener("click", function(){ scrollDirection(sections[5]); });
+

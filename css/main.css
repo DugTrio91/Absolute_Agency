@@ -17,16 +17,30 @@ a {
     cursor: pointer;
 }
 
-h2 {
+h1, h2, h3, h4, p{
+    font-weight: 200;
+}
+
+h2, h3, h4{
     color: black;
     font-family: "Raleway", sans-serif;
+    margin-bottom: 20px;  
+}
+
+h2{
     font-size: 2.1em;
-    margin-bottom: 10px;
+}
+
+h3{
+    font-size: 1.8em;
+}
+
+h4{
+    font-size: 1.2em;
 }
 
 p {
-    font-size: 1em;
-    font-weight: 200;
+    font-size: 0.9em;
 }
 
 
@@ -36,8 +50,6 @@ hr {
     margin: 20px 0;
     border: 1px solid #3a3a3a;
 }
-
-
 
 /*--FORMS--*/
 form {
@@ -199,8 +211,9 @@ header {
     width: 50px;
     height: 50px;
     position: absolute;
+    z-index: 999;
     background-color: #7bddd8;
-    top: 20px;
+    top: 35px;
     right: 20px;
 }
 
@@ -253,8 +266,9 @@ video, .video-gradient-layer {
     z-index: 2 !important;
     background-color: white;
     margin-top:-100.6vh;
-    filter: opacity(40%)
+    filter: opacity(70%)
 }
+
 
 .introduction-section{
     position: relative;
@@ -262,33 +276,33 @@ video, .video-gradient-layer {
     z-index: 3;
     top:-70vh;
     color: #111;
-    font-weight: 300;
 }
 
 .introduction-section img{
     height:60px;
     margin-bottom: 25px;
-    text-shadow: -1px -1px 6px rgba(150, 150, 150, 1);
+}
+.introduction-section a:first-child{
+    margin-right:20px;    
 }
 
-.introduction-section-link a{
+.introduction-section a:not(.introduction-section a:last-child){
     line-height: 20px;
-}
-.introduction-section-link a:first-child{
-     margin-right: 15px;   
-}
-.introduction-section-link a:hover:not(.introduction-section-link a:last-child){
-    padding-bottom: 5px;
-    border-bottom: 0.5px #fff solid;
+    font-weight: 400;
+    text-shadow: -0.1px 0.1px 5px #4b4b4b;
 }
 
-.introduction-section-link a:last-child{
-    font-size: 0.8em;
+.introduction-section a:hover:not(.introduction-section a:last-child){
+    padding-bottom: 5px;
+    border-bottom: 1.5px #7bddd8 solid;
+}
+
+.introduction-section a:last-child{
     padding:15px;
     background-color: black;
 }
-.introduction-section-link a:last-child:hover{
-    font-size: 0.8em;
+
+.introduction-section a:last-child:hover{
     padding:15px;
     background-color: #7bddd8;
 }
@@ -297,19 +311,32 @@ video, .video-gradient-layer {
     display: none;
 }
 
+.featured-projects{
+    text-align: center;
+    margin-top: -300px;
+    padding:50px 10px;
+}
+
+.featured-projects-container{
+    display: inline-block;
+}
+
+
 
 
 /*--WORK PAGE--*/
 .work-container{
-    margin:0px auto;
+    position: relative;
+    z-index: 1;
+    margin:120px 0px auto;
     text-align: center;
 }
 
 .portfolio-image-container{
     position: relative;
     z-index: 1;
-    height:300px;
-    width:400px;
+    height:250px;
+    width:350px;
     overflow: hidden;
     display: inline-block;
     vertical-align: top;
@@ -318,6 +345,8 @@ video, .video-gradient-layer {
 
 .portfolio-image-container img{
     height: 300px;
+    margin: -20px 0px 0px -20px;
+    opacity: 0.8;
 }
 
 .portfolio-text-container{
@@ -325,7 +354,7 @@ video, .video-gradient-layer {
     z-index: 99;
     height:100%;
     margin-top: -304px;
-    background:url(images/portfolio-container-cover.png) top center no-repeat;
+    margin-left: 20%;
     opacity: 0;
     transition: opacity .2s ease-in-out;
     -moz-transition: opacity .2s ease-in-out;
@@ -346,6 +375,7 @@ video, .video-gradient-layer {
 .portfolio-image-container:hover img{
     transition: all .2s ease-in-out;
     transform: scale(1.05);
+    opacity: 1;
     
 }
 
@@ -496,13 +526,31 @@ video, .video-gradient-layer {
     padding:10%;   
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+    
+    h2{
+    font-size: 1.5em;
+    }
+    
+    .introduction-section a:not(.introduction-section a:last-child){
+        visibility: hidden;
+    }
+    .introduction-section p{
+        margin-top: -60px;
+    }
+        
+    .logo{
+        display: none;
+    }
+    
     .mobile-br{
         display: block;
     }
-    
-    .introduction-section-link a:first-child{
-        margin-right: 0px;
-        padding-bottom: 15px;
-}
+    .featured-projects{
+        padding-top: 100px;
+    }
+    .portfolio-image-container{
+        width: 250px;
+    }
+   
 }
