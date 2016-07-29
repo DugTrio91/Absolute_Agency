@@ -53,8 +53,3 @@
 
 				 ?>
         </div>
-
-        
-            <?php
-	mysqli_close($dbconnect); 
-?>
