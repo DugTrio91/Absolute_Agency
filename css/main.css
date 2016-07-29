@@ -22,7 +22,6 @@ h1, h2, h3, h4, p{
 }
 
 h2, h3, h4{
-    color: black;
     font-family: "Raleway", sans-serif;
     margin-bottom: 20px;  
 }
@@ -211,7 +210,6 @@ header {
     width: 50px;
     height: 50px;
     position: absolute;
-    z-index: 999;
     background-color: #7bddd8;
     top: 35px;
     right: 20px;
@@ -266,7 +264,7 @@ video, .video-gradient-layer {
     z-index: 2 !important;
     background-color: white;
     margin-top:-100.6vh;
-    filter: opacity(70%)
+    filter: opacity(70%);
 }
 
 
@@ -321,9 +319,32 @@ video, .video-gradient-layer {
     display: inline-block;
 }
 
+.featured-info{
+    text-align: center;
+    color: #fff;
+    background: #7bddd8;
+    height: 200px;
+    padding: 30px;
+}
 
+.featurebox{
+    height: 400px;
+    width:33.33%;
+    display: inline-block;
+    margin-right: -4px;
+}
 
+.brand{
+   background: #ebebeb; 
+}
 
+.design{
+    background: #f0d6a1;
+}
+
+.web{
+    background: #8a8a8a;
+}
 /*--WORK PAGE--*/
 .work-container{
     position: relative;

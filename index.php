@@ -53,5 +53,18 @@
 
 				 ?>
         </div>
+        <div class="featured-info">
+            <h3>Brand focused. Strategy driven. Design-led.</h3>
+            <p>Our goal is to create better brands and better businesses.</p>
+        </div>
+        <div class="featurebox brand">
+            
+        </div>
+        <div class="featurebox design">
+            
+        </div>
+        <div class="featurebox web">
+            
+        </div>
 
         <?php include_once "footer.php"; ?>
