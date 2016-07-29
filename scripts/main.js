@@ -15,6 +15,9 @@ var menuItems = menu.getElementsByTagName("li");
 var menuOpen;
 
 function toggleMenu() {
+
+    console.log("test");
+
     //if the function hasnt been called yet
     if (menuOpen === undefined) {
         menuOpen = false;
