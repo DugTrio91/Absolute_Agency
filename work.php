@@ -11,16 +11,16 @@
 <div class="work-container">
    <?php 
 
-        $sql = "SELECT * FROM portfolioList ORDER BY portfolioText ASC";
+        $sql = "SELECT * FROM portfoliolist";
         $result = mysqli_query($dbconnect, $sql);
 
 		while($row = mysqli_fetch_array($result)){
                     
             echo "<div class='portfolio-image-container'>";
-			echo "<a href='" . linkify($row["portfolioText"]) . "'>";
-            echo "<img src='" .  $row["portfolioImage"] . "'/>";
+			echo "<a title=\"" . $row["portfolioTitle"] . "\" href=\"casestudy.php?id=" . $row["ID"] . "\">";
+            echo "<img src='" .  $row["coverImage"] . "'/>";
             echo "<div class='portfolio-text-container'>";
-            echo "<h4 class='portfolio-text-label'>" . $row["portfolioText"] . "</h4></a>";
+            echo "<h4 class='portfolio-text-label'>" . $row["portfolioTitle"] . "</h4></a>";
             echo "</div></div>";
         }
     ?> 
@@ -29,6 +29,4 @@
 </html>
 
 
-<?php
-	mysqli_close($dbconnect); 
-?>
+<?php include_once "footer.php"; ?>

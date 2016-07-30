@@ -45,9 +45,9 @@
                     echo "<a href='" . linkify($row["portfolioText"]) . "'>";
                     echo "<div class='featured-projects-container'>";
                     echo "<div class='portfolio-image-container'>";
-				    echo "<img src='" .  $row["portfolioImage"] . "'/>";
+				    echo "<img src='" .  $row["coverImage"] . "'/>";
                     echo "</div>";
-                    echo "<h4>" . $row["portfolioText"] . "</h4></a>";
+                    echo "<h4>" . $row["portfolioTitle"] . "</h4></a>";
                     echo "</div>";
 				}
 

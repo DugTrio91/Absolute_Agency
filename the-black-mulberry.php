@@ -65,6 +65,28 @@
                         <input id="submit" name="submit" type="submit" value="Send">
                     </form>
                 </div>
+                <div class="other-projects">
+            <h3>Other Projects</h3>
+            <br>
+            <br>
+            <?php 
+
+				$sql = "SELECT * FROM portfolioList ORDER BY RAND() limit 0,3";
+				$result = mysqli_query($dbconnect, $sql);
+                shuffle($result);
+				while($row = mysqli_fetch_array($result)){
+                    
+                    echo "<a href='" . linkify($row["portfolioText"]) . "'>";
+                    echo "<div class='featured-projects-container'>";
+                    echo "<div class='portfolio-image-container'>";
+				    echo "<img src='" .  $row["portfolioImage"] . "'/>";
+                    echo "</div>";
+                    echo "<h4>" . $row["portfolioText"] . "</h4></a>";
+                    echo "</div>";
+				}
+
+				 ?>
+        </div>
             </div>
         </div>
     </div>
