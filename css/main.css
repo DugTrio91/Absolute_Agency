@@ -406,7 +406,6 @@ video, .video-gradient-layer {
     position: relative;
     top:130px;
     width: 200px;
-    border-radius: 50px/50px;
     color: whitesmoke;
     background-color: black;
     padding:10px;
@@ -485,7 +484,7 @@ video, .video-gradient-layer {
 }
 
 .cover-logo {
-    background: url(../images/Black_Mulberry_logo.png) center no-repeat;
+    
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -ms-background-size: contain;
@@ -500,7 +499,7 @@ video, .video-gradient-layer {
     color: whitesmoke;
 }
 
-.mulberry-container1 {
+.case-study-container1, .mulberry-container1 {
     height: 100vh !important;
     background: url(../images/Black_Mulberry_Window.jpg) top no-repeat;
     -webkit-background-size: cover;
@@ -525,8 +524,7 @@ video, .video-gradient-layer {
     height:500px;    
 }
 
-.mulberry-container2-lower {
-    background: url(../images/Black_Mulberry_Menu.jpg) center no-repeat;
+.case-study-container2, .mulberry-container2-lower {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
@@ -534,7 +532,7 @@ video, .video-gradient-layer {
     background-size: cover;
 }
 
-.mulberry-container3-lower {
+.case-study-container3-lower, .mulberry-container3-lower {
     background: url(../images/Black_Mulberry_Invitation_Design.jpg) center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -543,7 +541,7 @@ video, .video-gradient-layer {
     background-size: cover;
 }
 
-.mulberry-container4 {
+.case-study-container4, .mulberry-container4 {
     height:100vh;
     background: url(../images/Black_Mulberry_Logo_Design-Absolute.jpg) center no-repeat;
     -webkit-background-size: cover;
@@ -553,7 +551,7 @@ video, .video-gradient-layer {
     background-size: cover;
 }
 
-.mulberry-container5-lower {
+.case-study-container5-lower, .mulberry-container5-lower {
     background: url(../images/Black_Mulberry_Loyalty_Card_Design-.jpg) center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -562,7 +560,7 @@ video, .video-gradient-layer {
     background-size: cover;
 }
 
-.mulberry-container6 h2{
+.case-study-container6 h2, .mulberry-container6 h2{
     text-align: center;
     padding:10%;   
 }
