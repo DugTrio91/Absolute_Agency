@@ -1,11 +1,6 @@
 <?php 
     $title = "Absolute Agency | Creative marketing and design Newcastle upon Tyne | Gateshead | Design | Web Design | Branding | Logo Design";
-    include_once "header.php";
-
-    function linkify($title){
-        $lower = strtolower($title);
-        return str_replace(" ", "-", $lower) . ".php";
-    }    
+    include_once "header.php";   
 ?>
 
     <div class="video-introduction">
@@ -37,12 +32,12 @@
             <br>
             <?php 
 
-				$sql = "SELECT * FROM portfolioList ORDER BY RAND() limit 0,3";
+				$sql = "SELECT * FROM portfolioList ORDER BY RAND() limit 3";
 				$result = mysqli_query($dbconnect, $sql);
-                shuffle($result);
-				while($row = mysqli_fetch_array($result)){
+
+                while($row = mysqli_fetch_array($result)){
                     
-                    echo "<a href='" . linkify($row["portfolioText"]) . "'>";
+                    echo "<a href=\"casestudy.php?id=" . $row["ID"] . "\">";
                     echo "<div class='featured-projects-container'>";
                     echo "<div class='portfolio-image-container'>";
 				    echo "<img src='" .  $row["coverImage"] . "'/>";
