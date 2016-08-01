@@ -9,7 +9,7 @@
         </video>
         <div class="video-gradient-layer"></div>
         <div class="introduction-section">
-            <img src="images/absolute_logo.png" alt="absolute logo">
+            <img class="absolute-logo" src="images/absolute_logo.png" alt="absolute logo">
             <br>
             <h2>Design-led<br>brand communication<br>&amp;digital innovation</h2>
             <br>

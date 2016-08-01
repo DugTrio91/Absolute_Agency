@@ -82,16 +82,16 @@ textarea {
 }
 
 #submit{
-    width: 77%;
+    width: 130px;
     height: 60px;
-    background-color: #757575;
+    background-color: #000;
     color: white;
     cursor: pointer;
+    font-weight: 600;
 }
 
 #submit:hover{
-    opacity: 0.9;
-    filter: opacity(90%);
+    background-color: #7bddd8;
 }
 
 
@@ -291,7 +291,7 @@ video, .video-gradient-layer {
     color: #111;
 }
 
-.introduction-section img{
+.absolute-logo{
     height:60px;
     margin-bottom: 25px;
 }
@@ -468,9 +468,8 @@ video, .video-gradient-layer {
 .cover-gradient {
     height: 100vh;
     margin-bottom: -100vh;
-    background-color: #383838;
-    opacity: 0.9;
-    filter: opacity(90%);
+    background-color: #fff;
+    filter: opacity(70%);
 }
 
 .cover {
@@ -484,29 +483,22 @@ video, .video-gradient-layer {
 }
 
 .cover-logo {
-    
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -ms-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
-    border-right: 1px solid white;
+    border-right: 2px solid #ac8d4f;
 }
 
 .cover-text h2 {
     padding-top: 16vh;
     padding-left: 15px;
-    color: whitesmoke;
+    color: #ac8d4f;
 }
 
-.case-study-container1, .mulberry-container1 {
+.case-study-container1 {
     height: 100vh !important;
-    background: url(../images/Black_Mulberry_Window.jpg) top no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     text-align: center;
 }
 
@@ -524,7 +516,7 @@ video, .video-gradient-layer {
     height:500px;    
 }
 
-.case-study-container2, .mulberry-container2-lower {
+.case-study-container1, .case-study-container2, .case-study-container3-lower, .case-study-container4, .case-study-container5-lower{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
@@ -532,35 +524,15 @@ video, .video-gradient-layer {
     background-size: cover;
 }
 
-.case-study-container3-lower, .mulberry-container3-lower {
-    background: url(../images/Black_Mulberry_Invitation_Design.jpg) center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
-.case-study-container4, .mulberry-container4 {
+.case-study-container4 {
     height:100vh;
-    background: url(../images/Black_Mulberry_Logo_Design-Absolute.jpg) center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
 }
 
-.case-study-container5-lower, .mulberry-container5-lower {
-    background: url(../images/Black_Mulberry_Loyalty_Card_Design-.jpg) center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
-.case-study-container6 h2, .mulberry-container6 h2{
+
+.case-study-container6 h2{
     text-align: center;
     padding:10%;   
 }
