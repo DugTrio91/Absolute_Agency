@@ -30,9 +30,9 @@
                 <br>Logo designs to full brand experiences across all marketing. </p>
             <br>
             <br>
-            <?php 
+            <?php
 
-				$sql = "SELECT * FROM portfolioList ORDER BY RAND() limit 3";
+				$sql = "SELECT * FROM portfoliolist ORDER BY RAND() LIMIT 3";
 				$result = mysqli_query($dbconnect, $sql);
 
                 while($row = mysqli_fetch_array($result)){
@@ -44,9 +44,10 @@
                     echo "</div>";
                     echo "<h4>" . $row["portfolioTitle"] . "</h4></a>";
                     echo "</div>";
+                    
 				}
 
-				 ?>
+			?>
         </div>
         <div class="featured-info">
             <h3>Brand focused. Strategy driven. Design-led.</h3>
