@@ -66,7 +66,7 @@ form {
 input, textarea {
     width: 75%;
     height: 37px;
-    background: whitesmoke;
+    background: #f5f5f5;
     font-size: 18px;
     border: none;
     outline: 0;
