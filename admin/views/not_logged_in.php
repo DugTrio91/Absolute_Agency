@@ -26,6 +26,7 @@ if (isset($login)) {
     <script>tinymce.init({ selector:'textarea#CMS'});</script>
 
 </head>
+<body>
 <div class="admin-login">
 <img class="absolute-logo" src="../images/absolute_logo.png" alt="absolute logo">
 <br>
@@ -41,3 +42,4 @@ if (isset($login)) {
 <p>Click <a href="../index.php" title="home"><strong>here</strong></a> to go back to the main website.</p>
 </form>
 </div>
+</body>

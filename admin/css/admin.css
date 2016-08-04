@@ -72,3 +72,48 @@ textarea {
     height:50px;
     margin-bottom: 25px;
 }
+
+.admin-container{
+    width:70%;
+    max-width: 1000px;
+    background: #fff;
+    margin: 0px auto;
+    padding: 5%;
+    text-align: center;
+}
+
+.admin-welcome{
+    margin-bottom: 50px;
+}
+
+.admin-tasks{
+    list-style: none;
+    margin-left: -40px;
+}
+
+.admin-tasks li{
+    margin: 5px;
+    display: inline-block;
+}
+
+.admin-task-button i{
+    background-color: #000;
+    color: #fff;
+    width: 65px;
+    height: 65px;
+    filter: opacity(80%);
+    padding: 15px;
+}
+
+.admin-task-button i:hover{
+    filter: opacity(100%);
+}
+.admin-task-button p{
+    margin: 3px 0px 0px 0px;
+}
+@media only screen and (max-width: 767px) {
+    
+    .admin-container{
+        width: 80%;
+    }
+}
