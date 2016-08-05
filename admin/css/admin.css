@@ -43,7 +43,11 @@ textarea {
     resize: none;
     -moz-resize: none;
 }
-#login_input_username, #login_input_password{
+#login_input_username, 
+#login_input_password, 
+#login_input_email, 
+#login_input_password_new, 
+#login_input_password_repeat{
     max-width: 300px;
 }
 #submit{
@@ -105,11 +109,42 @@ textarea {
     padding: 15px;
 }
 
-.admin-task-button i:hover{
+.admin-task-button i:hover, .admin-work-button:hover{
     filter: opacity(100%);
 }
 .admin-task-button p{
     margin: 3px 0px 0px 0px;
+}
+
+.admin-work-button{
+    width: 90%;
+    height: 70px;
+    max-width: 300px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    margin:5px;
+    filter: opacity(80%)
+}
+
+.admin-work-thumbnail{
+    height: 70px;
+    width: 70px;
+    float: left;
+}
+.admin-add-button-thumbnail{
+    background: url(../../images/plus-button.png)center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.admin-work-text{
+    max-height: 22px;
+    overflow: hidden;
+    margin: 23px 5px 0px 5px;
 }
 @media only screen and (max-width: 767px) {
     
