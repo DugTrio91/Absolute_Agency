@@ -41,7 +41,7 @@
 
 		//insert form values into database
 		$sql = "INSERT INTO portfoliolist (coverImage, logo, portfolioTitle, aboutIntro, image2, aboutClient, image3, image4, aboutDesign, finalImage, workType) VALUES ('$coverImage', '$logo', '$portfolioTitle', '$aboutIntro', '$image2', '$aboutClient', '$image3', '$image4', '$aboutDesign', '$finalImage', '$workType')";
-		$result = mysqli_query($connector, $sql);
+		$result = mysqli_query($dbconnect, $sql);
 
 		//if successful
 		if($result){
@@ -49,7 +49,7 @@
 		} else {
 			//if not
 			echo "Error when adding work.";
-			die(mysqli_error($connector));
+			die(mysqli_error($dbconnect));
 		}
 
 	} 
