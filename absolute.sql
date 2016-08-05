@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:8889
--- Generation Time: Jul 30, 2016 at 02:49 PM
+-- Generation Time: Aug 05, 2016 at 03:58 PM
 -- Server version: 5.5.42
 -- PHP Version: 7.0.0
 
@@ -41,7 +41,7 @@ CREATE TABLE `portfoliolist` (
 
 INSERT INTO `portfoliolist` (`ID`, `coverImage`, `logo`, `portfolioTitle`, `aboutIntro`, `image2`, `aboutClient`, `image3`, `image4`, `aboutDesign`, `finalImage`, `workType`) VALUES
 (1, 'http://marksandbox.esy.es/images/Baker_Furniture_Brochure_Design.jpg', '0', 'Baker Furniture', '', '', '', '', '', '', '', 'design'),
-(2, 'http://marksandbox.esy.es/images/Black_Mulberry_Loyalty_Card_Design-.jpg', 'http://marksandbox.esy.es/images/Black_Mulberry_logo.png', 'The Black Mulberry', 'Legend has it that the tree was planted during the reign of King James 1 and is over 400 years old. At the time the King was trying to encourage the development of a national silk industry. Sadly the much sought after silk trade never took off as silkworms only feed off the white mulberry tree, leaving this lovely Black Mulberry to enjoy its days standing proudly beside the Weeping Willow watching over the River Nidd.', 'http://marksandbox.esy.es/images/Black_Mulberry_Menu.jpg', 'The Rascals Cafe approached us to rename and rebrand their traditional cafe on Knaresbrough Waterside. Situated in a market town rich in history, they wanted a name that had historical and regional relevance. Working with the client we discovered the story of The Black Mulberry.', 'http://marksandbox.esy.es/images/Black_Mulberry_Invitation_Design.jpg', 'http://marksandbox.esy.es/images/Black_Mulberry_Logo_Design-Absolute.jpg', 'We created a contemporary yet rustic feel, that was applied to a suite of marketing materials including the design of menus, loyalty cards, signage and invitations, as well as setting up and managing their social media channels.', 'http://marksandbox.esy.es/images/Black_Mulberry_Loyalty_Card_Design-.jpg', 'branding'),
+(2, 'http://marksandbox.esy.es/images/Black_Mulberry_Window.jpg', 'http://marksandbox.esy.es/images/Black_Mulberry_logo.png', 'The Black Mulberry', 'Legend has it that the tree was planted during the reign of King James 1 and is over 400 years old. At the time the King was trying to encourage the development of a national silk industry. Sadly the much sought after silk trade never took off as silkworms only feed off the white mulberry tree, leaving this lovely Black Mulberry to enjoy its days standing proudly beside the Weeping Willow watching over the River Nidd.', 'http://marksandbox.esy.es/images/Black_Mulberry_Menu.jpg', 'The <strong>Rascals Cafe</strong> approached us to rename and rebrand their traditional cafe on Knaresbrough Waterside. Situated in a market town rich in history, they wanted a name that had historical and regional relevance. Working with the client we discovered the story of The Black Mulberry.', 'http://marksandbox.esy.es/images/Black_Mulberry_Invitation_Design.jpg', 'http://marksandbox.esy.es/images/Black_Mulberry_Logo_Design-Absolute.jpg', 'We created a contemporary yet rustic feel, that was applied to a suite of marketing materials including the design of menus, loyalty cards, signage and invitations, as well as setting up and managing their social media channels.', 'http://marksandbox.esy.es/images/Black_Mulberry_Loyalty_Card_Design-.jpg', 'branding'),
 (3, 'http://marksandbox.esy.es/images/Blagdon_Kitchen_Advert-Absolute.jpg', '0', 'Blagdon Kitchen Design', '', '', '', '', '', '', '', 'design'),
 (4, 'http://marksandbox.esy.es/images/DraytonPartners_Stationery_Design-Absolute.jpg', '0', 'Drayton Partners', '', '', '', '', '', '', '', 'stationary'),
 (5, 'http://marksandbox.esy.es/images/E-Book_Covers_Design.jpg', '0', 'James T. Raydel', '', '', '', '', '', '', '', 'illustration'),
@@ -52,6 +52,26 @@ INSERT INTO `portfoliolist` (`ID`, `coverImage`, `logo`, `portfolioTitle`, `abou
 (10, 'http://marksandbox.esy.es/images/NCFE-Exhibition-Stand-Design.jpg', '0', 'NCFE', '', '', '', '', '', '', '', 'design'),
 (11, 'http://marksandbox.esy.es/images/Northgate_Estate_Agents_Website.jpg', '0', 'Northgate Estate Agents', '', '', '', '', '', '', '', 'web'),
 (12, 'http://marksandbox.esy.es/images/Northgate_To_Let_Board.jpg', '0', 'Northgate Signature', '', '', '', '', '', '', '', 'branding');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL COMMENT 'auto incrementing user_id of each user, unique index',
+  `user_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s name, unique',
+  `user_password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s password in salted and hashed format',
+  `user_email` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s email, unique'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `user_name`, `user_password_hash`, `user_email`) VALUES
+(1, 'absoluteadmin', '$2y$10$aeFBTIf0A8zKEkAK96KOS.XWJvvaPm7KbTwA4f5lF6v03X4Jynzeu', 'absolute@absolute.com');
 
 --
 -- Indexes for dumped tables
@@ -64,6 +84,14 @@ ALTER TABLE `portfoliolist`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `user_name` (`user_name`),
+  ADD UNIQUE KEY `user_email` (`user_email`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -72,3 +100,8 @@ ALTER TABLE `portfoliolist`
 --
 ALTER TABLE `portfoliolist`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index',AUTO_INCREMENT=2;
