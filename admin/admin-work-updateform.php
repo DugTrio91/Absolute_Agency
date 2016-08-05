@@ -13,7 +13,8 @@
         <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
         <script>
             tinymce.init({
-                selector: 'textarea'
+                selector: 'textarea', // change this value according to your html
+                block_formats: '* Paragraph=p;Header 1=h1;Header 2=h2;Header 3=h3'
             });
         </script>
 
@@ -21,9 +22,9 @@
 
     <body>
         <div class="admin-container">
-            
 
-<?php
+
+            <?php
 
 	//get value of id that sent from address bar
 	$id = $_GET["id"];
@@ -41,8 +42,9 @@
 	$row = mysqli_fetch_array($result);
 	$title = $row["portfolioTitle"]; 
 ?>
-            <h3>Edit <?php echo $title; ?>'s page</h3>
+                <h3>Edit <?php echo $title; ?>'s page</h3>
                 <form method="post" action="admin-work-update.php">
+                    <p>NOTE: If pasting text from another source, ensure you select "Format" > "Clear Formatting".<br>Failure to do so will result in an error when saving the form</p>
 
 
                     <label for="portfolioTitle">Project Name:</label>
@@ -79,15 +81,15 @@
                     <input type="file" id="finalImage" name="finalImage" value="<?php echo $row['finalImage']; ?>" />
                     <br />
                     <input type="hidden" id="ID" name="ID" value="<?php echo $row['ID'];?>" />
-                    
+
                     <input id="submit" type="submit" name="Update"></input>
                     <a href="admin-work.php">
-                    <p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
+                        <p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
                     </a>
-                    
+
                 </form>
 
-            
+
     </body>
 
     </html>
