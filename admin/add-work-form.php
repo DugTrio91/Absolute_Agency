@@ -28,36 +28,36 @@
                 <input type="text" id="portfolioTitle" name="portfolioTitle" />
                 <br />
                 <label for="coverImage">Cover Image:</label>
-                <input type="text" id="coverImage" name="coverImage" />
+                <input type="file" id="coverImage" name="coverImage" />
                 <br />
                 <label for="aboutIntro">Introduction:</label>
                 <textarea id="aboutIntro" name="aboutIntro"></textarea>
                 <br />
                 <label for="image2">Image 2:</label>
-                <input type="text" id="image2" name="image2" />
+                <input type="file" id="image2" name="image2" />
                 <br />
                 <label for="aboutClient">About the Client:</label>
                 <textarea id="aboutClient" name="aboutClient"></textarea>
                 <br />
                 <label for="image3">Image 3:</label>
-                <input type="text" id="image3" name="image3" />
+                <input type="file" id="image3" name="image3" />
                 <br />
                 <label for="image4">Image 4:</label>
-                <input type="text" id="image4" name="image4" />
+                <input type="file" id="image4" name="image4" />
                 <br />
                 <label for="aboutDesign">About the Design:</label>
                 <textarea id="aboutDesign" name="aboutDesign"></textarea>
                 <br />
                 <label for="finalImage">Final Image:</label>
-                <input type="text" id="finalImage" name="finalImage" />
+                <input type="file" id="finalImage" name="finalImage" />
                 <br />
-
                 <input id="submit" type="submit" name="Add"></input>
+                 <a href="admin-work.php">
+                <p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
+                </a>
             </form>
 
-            <a href="admin-work.php">
-                <p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
-            </a>
+           
         </div>
     </body>
 

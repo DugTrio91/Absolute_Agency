@@ -22,7 +22,7 @@
 
 		while($row = mysqli_fetch_array($result)){
                     
-			echo "<a title='" . $row["portfolioTitle"] . "' href='../casestudy.php?id=" . $row["ID"] . "'>";
+			echo "<a title='" . $row["portfolioTitle"] . "' href='admin-work-updateform.php?id=" . $row["ID"] . "'>";
             echo "<div class='admin-work-button'><div class='admin-work-thumbnail' style='background: url(" . $row["coverImage"] . ") center; background-size: cover'></div><h4 class='admin-work-text'>" . $row["portfolioTitle"] . "</h4></div></a>";
             
         }
