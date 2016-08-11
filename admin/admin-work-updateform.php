@@ -51,6 +51,7 @@
                     <input type="text" id="portfolioTitle" name="portfolioTitle" value="<?php echo $row['portfolioTitle']; ?>" />
                     <br />
                     <label for="coverImage">Cover Image:</label>
+                    <p>Current: <?php echo "<a title=\"Click to open\" target=\"_blank\" href=\"" . $row["coverImage"] . "\">" . $row["coverImage"] . "</a>"; ?></p>
                     <input type="file" id="coverImage" name="coverImage" value="<?php echo $row['coverImage']; ?>" />
                     <br />
                     <label for="aboutIntro">Introduction:</label>
@@ -59,6 +60,7 @@
                     </textarea>
                     <br />
                     <label for="image2">Image 2:</label>
+                    <p>Current: <?php echo "<a title=\"Click to open\" target=\"_blank\" href=\"" . $row["image2"] . "\">" . $row["image2"] . "</a>"; ?></p>
                     <input type="file" id="image2" name="image2" value="<?php echo $row['portfolioTitle']; ?>" />
                     <br />
                     <label for="aboutClient">About the Client:</label>
@@ -67,9 +69,11 @@
                     </textarea>
                     <br />
                     <label for="image3">Image 3:</label>
+                    <p>Current: <?php echo "<a title=\"Click to open\" target=\"_blank\" href=\"" . $row["image3"] . "\">" . $row["image3"] . "</a>"; ?></p>
                     <input type="file" id="image3" name="image3" value="<?php echo $row['image3']; ?>" />
                     <br />
                     <label for="image4">Image 4:</label>
+                    <p>Current: <?php echo "<a title=\"Click to open\" target=\"_blank\" href=\"" . $row["image4"] . "\">" . $row["image4"] . "</a>"; ?></p>
                     <input type="file" id="image4" name="image4" value="<?php echo $row['image4']; ?>" />
                     <br />
                     <label for="aboutDesign">About the Design:</label>
@@ -78,6 +82,7 @@
                     </textarea>
                     <br />
                     <label for="finalImage">Final Image:</label>
+                    <p>Current: <?php echo "<a title=\"Click to open\" target=\"_blank\" href=\"" . $row["finalImage"] . "\">" . $row["finalImage"] . "</a>"; ?></p>
                     <input type="file" id="finalImage" name="finalImage" value="<?php echo $row['finalImage']; ?>" />
                     <br />
                     <input type="hidden" id="ID" name="ID" value="<?php echo $row['ID'];?>" />
