@@ -22,7 +22,7 @@
     <body>
         <div class="admin-container">
             <h3>Create new portfolio page</h3>
-            <form action="add-work.php" method="post">
+            <form action="add-work.php" method="post" enctype="multipart/form-data">
                
                 <label for="portfolioTitle">Project Name:</label>
                 <input type="text" id="portfolioTitle" name="portfolioTitle" />

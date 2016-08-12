@@ -10,7 +10,7 @@
 
 <div class="work-container">
    <?php 
-
+    
         $sql = "SELECT * FROM portfoliolist";
         $result = mysqli_query($dbconnect, $sql);
 
@@ -18,7 +18,7 @@
                     
             echo "<div class='portfolio-image-container'>";
 			echo "<a title=\"" . $row["portfolioTitle"] . "\" href=\"casestudy.php?id=" . $row["ID"] . "\">";
-            echo "<img src='" .  $row["coverImage"] . "'/>";
+            echo "<img src='" .  substr($row["coverImage"], 3) . "'/>";
             echo "<div class='portfolio-text-container'>";
             echo "<h4 class='portfolio-text-label'>" . $row["portfolioTitle"] . "</h4></a>";
             echo "</div></div>";

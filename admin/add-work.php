@@ -27,7 +27,6 @@
 	if(isset($_POST["Add"])){
 
 		//get form values
-		$coverImage = $_POST["coverImage"];
 		$logo = $_POST["logo"];
 		$portfolioTitle = $_POST["portfolioTitle"];
 		$aboutIntro = $_POST["aboutIntro"];
@@ -38,7 +37,50 @@
         $aboutDesign = $_POST["aboutDesign"];
         $finalImage = $_POST["finalImage"];
         $workType = $_POST["workType"];
-
+        
+        $target_dir = "../images/portfolio/";
+            $coverImage = $target_dir . basename($_FILES["coverImage"]["name"]);
+            $uploadOk = 1;
+            $imageFileType = pathinfo($coverImage,PATHINFO_EXTENSION);
+            // Check if image file is a actual image or fake image
+            if(isset($_POST["submit"])) {
+                $check = getimagesize($_FILES["coverImage"]["tmp_name"]);
+                if($check !== false) {
+                    echo "File is an image - " . $check["mime"] . ".";
+                    $uploadOk = 1;
+                } else {
+                    echo "File is not an image.";
+                    $uploadOk = 0;
+                }
+            }
+            // Check if file already exists
+            if (file_exists($coverImage)) {
+                echo "Note! This file already exists on the server. ";
+                $uploadOk = 0;
+            }
+            // Check file size
+            if ($_FILES["coverImage"]["size"] > 500000) {
+                echo "Note! Your file is too large. ";
+                $uploadOk = 0;
+            }
+            // Allow certain file formats
+            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+            && $imageFileType != "gif" ) {
+                echo "Note! Only JPG, JPEG, PNG & GIF files are allowed. ";
+                $uploadOk = 0;
+            }
+            // Check if $uploadOk is set to 0 by an error
+            if ($uploadOk == 0) {
+                echo " Your file was not uploaded. ";
+            // if everything is ok, try to upload file
+            } else {
+                if (move_uploaded_file($_FILES["coverImage"]["tmp_name"], $coverImage)) {
+                    echo " ";
+                } else {
+                    echo "Note!, there was an error uploading your file.";
+                }
+            }
+        
 		//insert form values into database
 		$sql = "INSERT INTO portfoliolist (coverImage, logo, portfolioTitle, aboutIntro, image2, aboutClient, image3, image4, aboutDesign, finalImage, workType) VALUES ('$coverImage', '$logo', '$portfolioTitle', '$aboutIntro', '$image2', '$aboutClient', '$image3', '$image4', '$aboutDesign', '$finalImage', '$workType')";
 		$result = mysqli_query($dbconnect, $sql);
