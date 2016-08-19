@@ -40,7 +40,7 @@
                     echo "<a href=\"casestudy.php?id=" . $row["ID"] . "\">";
                     echo "<div class='featured-projects-container'>";
                     echo "<div class='portfolio-image-container'>";
-				    echo "<img src='" .  $row["coverImage"] . "'/>";
+				    echo "<img src='" .  substr($row["coverImage"], 3) . "'/>";
                     echo "</div>";
                     echo "<h4>" . $row["portfolioTitle"] . "</h4></a>";
                     echo "</div>";
@@ -61,6 +61,22 @@
         </div>
         <div class="featurebox web">
             
+        </div>
+        <div class="clients-bar">
+            <?php
+
+				$sql = "SELECT * FROM clients ORDER BY RAND()";
+				$result = mysqli_query($dbconnect, $sql);
+
+                while($row = mysqli_fetch_array($result)){
+                    
+                    echo "<div class='client-container' style='background: url(" .  substr($row["monoLogo"], 3) . "onmouseover='" .  substr($row["colourLogo"], 3) . "'></div>";
+                    
+                    
+				}
+
+			?>
+            </div>
         </div>
 
         <?php include_once "footer.php"; ?>
