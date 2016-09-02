@@ -180,3 +180,11 @@ casemenuLinks[3].addEventListener("click", function(){ scrollDirection(sections[
 casemenuLinks[4].addEventListener("click", function(){ scrollDirection(sections[4]); });
 casemenuLinks[5].addEventListener("click", function(){ scrollDirection(sections[5]); });
 
+
+
+
+
+
+function changeBackground(elem, image){
+    elem.style.background = "url(" + image + ")";
+}

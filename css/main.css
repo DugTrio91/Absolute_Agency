@@ -278,7 +278,7 @@ video, .video-gradient-layer {
     position: relative;
     z-index: 2 !important;
     background-color: white;
-    margin-top:-100.7vh;
+    margin-top:-101vh;
     filter: opacity(70%);
 }
 
@@ -366,9 +366,53 @@ video, .video-gradient-layer {
     background: #8a8a8a;
 }
 
-.clients-bar{
-    
+.clients-section{
+    background: #dbdbdb;
+    text-align: center;
+    padding: 100px 15%;
+    margin-top: -5px;
 }
+
+.client-frame{
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    margin: 20px;
+}
+
+.client-image{
+    height: 150px;
+    width: 150px;
+    margin: 25px;
+    -webkit-background-position: center center !important;
+    -moz-background-position: center center !important;
+    -ms-background-position: center center !important;
+    -o-background-position: center center !important;
+    background-position: center center !important;
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    -ms-background-size: contain !important;
+    -o-background-size: contain !important;
+    background-size: contain !important;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    -moz-filter: grayscale(100%);
+    -moz-transition: .3s ease-in-out;
+    -o-filter: grayscale(100%);
+    -o-transition: .3s ease-in-out;
+}
+
+.client-image:hover{
+    -webkit-filter: grayscale(0%);
+    -webkit-transition: .3s ease-in-out;
+    -moz-filter: grayscale(0%);
+    -moz-transition: .3s ease-in-out;
+    -o-filter: grayscale(0%);
+    -o-transition: .3s ease-in-out;
+}
+
 
 /*--WORK PAGE--*/
 .work-container{

@@ -62,15 +62,19 @@
         <div class="featurebox web">
             
         </div>
-        <div class="clients-bar">
+        <div class="clients-section">
+               <h3>Our Clients</h3>
+               <p>A selection of some of the people that we've worked with</p>
+               <br>
             <?php
 
-				$sql = "SELECT * FROM clients ORDER BY RAND()";
+				$sql = "SELECT * FROM clients ORDER BY RAND() LIMIT 9";
 				$result = mysqli_query($dbconnect, $sql);
 
                 while($row = mysqli_fetch_array($result)){
-                    
-                    echo "<div class='client-container' style='background: url(" .  substr($row["monoLogo"], 3) . "onmouseover='" .  substr($row["colourLogo"], 3) . "'></div>";
+                    echo "<div class=\"client-frame\">";
+                    echo "<div class=\"client-image\" style=\"background:url(" .  substr($row["colourLogo"], 3) . ") no-repeat\"></div>";
+                    echo "</div>";
                     
                     
 				}
