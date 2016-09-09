@@ -9,6 +9,10 @@
 ?>
 
 <div class="work-container">
+  
+<h2>Work</h2>
+<p>A selection of some of the work we have produced for our clients</p>
+  <br>
    <?php 
     
         $sql = "SELECT * FROM portfoliolist";

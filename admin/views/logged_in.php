@@ -28,6 +28,9 @@
                   <a class="admin-task-button admin-clients" href="admin-clients.php"><i class="fa fa-building-o fa-4x" aria-hidden="true"></i><br><p>Clients</p></a>
               </li>
               <li>
+                  <a class="admin-task-button admin-blog" href="admin-blog.php"><i class="fa fa-pencil-square-o fa-4x" aria-hidden="true"></i><br><p>Blog</p></a>
+              </li>
+              <li>
                   <a class="admin-task-button admin-register" href="register.php"><i class="fa fa-user-plus fa-4x" aria-hidden="true"></i><br><p>New user</p></a>
               </li>
               <li>
