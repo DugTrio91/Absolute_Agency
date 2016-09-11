@@ -1,6 +1,3 @@
-<?php
-    require_once 'createsend/csrest_campaigns.php'
-?>
 <footer>
     <div class="footer-container footer-container1">
         <p>Widget 1</p>

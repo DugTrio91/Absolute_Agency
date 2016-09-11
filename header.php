@@ -36,22 +36,22 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="Twitter">
+                        <a href="https://twitter.com/absolute_hello" title="Twitter">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="Facebook">
+                        <a href="https://www.facebook.com/absoluteprofile" title="Facebook">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="Pinterest">
+                        <a href="https://uk.pinterest.com/absolute_pin/" title="Pinterest">
                             <i class="fa fa-pinterest" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="Instagram">
+                        <a href="https://www.instagram.com/absolute_pics/" title="Instagram">
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                         </a>
                     </li>
