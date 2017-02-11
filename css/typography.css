@@ -1,0 +1,82 @@
+@font-face {
+    font-family:Questa;
+    src:url(../fonts/Questa_Grande_Regular.otf);
+}
+
+@font-face {
+    font-family:Open;
+    src:url(../fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family:Didot;
+    src:url(../fonts/Didot.ttc);
+}
+
+
+body{
+    font-family: "Open",sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+h1, h2, h3, h4, p{
+    font-weight: 200;
+    opacity: 0.7;
+}
+
+h2, h4{
+    font-family: "Questa", serif;
+    margin-bottom: 20px;  
+}
+
+h2{
+    font-size: 2.1em;
+}
+
+.h2-grey{
+    color: #d1d3d4;
+}
+
+
+
+h3{
+    font-size: 1.8em;
+    font-family: Didot;
+}
+.h3-gold{
+    color: #ac8d4f;
+    font-style: italic;
+}
+
+.dottedBorder{
+    background: #fff;
+    padding: 30px;
+    max-width: 25%;
+    outline-style: dotted;
+    outline-color: #fff;
+    outline-offset: 10px;
+    margin: 20px auto;
+    opacity: 0.7;
+}
+h4{
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    h2, h3{
+    font-size: 1.5em;
+    }

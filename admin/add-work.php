@@ -25,7 +25,52 @@
             <?php
 
 	if(isset($_POST["Add"])){
-
+	
+	foreach($_FILES as $file){
+		$filename = $file["name"];
+		$file_basename = substr($filename, 0, strripos($filename, '.')); // get file extention
+		$file_ext = substr($filename, strripos($filename, '.')); // get file name
+		$filesize = $file["size"];
+		$allowed_file_types = array('.jpeg','.jpg','.png');
+        $targetdir = ["../images/portfolio/"]
+        $i = 1;
+	 
+		if (in_array($file_ext,$allowed_file_types) && ($filesize < 10000000))
+		{	
+			// Rename file
+			$newfilename = md5($file_basename) . $i . $file_ext;
+			if (file_exists("../images/portfolio/" . $newfilename))
+			{
+				// file already exists error
+				echo "You have already uploaded this file.";
+			}
+			else
+			{		
+				move_uploaded_file($file["tmp_name"], "../images/portfolio/" . $newfilename);
+                $i++;
+				echo "File uploaded successfully.";
+			}
+		}
+		elseif (empty($file_basename))
+		{	
+			// file selection error
+			echo "Please select a file to upload.";
+		} 
+		elseif ($filesize > 10000000)
+		{	
+			// file size error
+			echo "The file you are trying to upload is too large.";
+		}
+		else
+		{
+			// file type error
+			echo "Only these file typs are allowed for upload: " . implode(', ',$allowed_file_types);
+			unlink($file["tmp_name"]);
+		}
+	}
+}
+        
+        /*
 		//get form values
 		$logo = $_POST["logo"];
 		$portfolioTitle = $_POST["portfolioTitle"];
@@ -80,6 +125,8 @@
                     echo "Note!, there was an error uploading your file.";
                 }
             }
+        */
+        
         
 		//insert form values into database
 		$sql = "INSERT INTO portfoliolist (coverImage, logo, portfolioTitle, aboutIntro, image2, aboutClient, image3, image4, aboutDesign, finalImage, workType) VALUES ('$coverImage', '$logo', '$portfolioTitle', '$aboutIntro', '$image2', '$aboutClient', '$image3', '$image4', '$aboutDesign', '$finalImage', '$workType')";

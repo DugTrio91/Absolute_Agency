@@ -10,7 +10,8 @@
 
 <div class="work-container">
   
-<h2>Work</h2>
+<h3 class="dottedBorder">Our work</h3>
+<br>
 <p>A selection of some of the work we have produced for our clients</p>
   <br>
    <?php 

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="css/admin.css" />
-	<title>Admin Area | Portfolio</title>
+	<title>Admin Area | Clients</title>
 
 </head>
 <body>
@@ -22,7 +22,7 @@
 
 		while($row = mysqli_fetch_array($result)){
                     
-			echo "<a title='" . $row["clientName"] . "' href='admin-work-updateform.php?id=" . $row["ID"] . "'>";
+			echo "<a title='" . $row["clientName"] . "' href='admin-client-updateform.php?id=" . $row["id"] . "'>";
             echo "<div class='admin-work-button'><h4 class='admin-work-text'>" . $row["clientName"] . "</h4></div></a>";
             
         }

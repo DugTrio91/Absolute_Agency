@@ -10,15 +10,15 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/admin.css" />
         <title>Admin Area | Create new work</title>
-        <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-
+        
     </head>
 
     <body>
         <div class="admin-container">
 
             <?php
-
+            
+	//if you came here from the add client page
 	if(isset($_POST["clientAdd"])){
 
 		//get form values
@@ -71,7 +71,7 @@
         
         
 		//insert form values into database
-		$sql = "INSERT INTO clients (clientName, colourLogo, monoLogo) VALUES ('$clientName', '$colourLogo', '$monoLogo')";
+		$sql = "INSERT INTO clients (clientName, colourLogo) VALUES ('$clientName', '$colourLogo')";
 		$result = mysqli_query($dbconnect, $sql);
 
 		//if successful

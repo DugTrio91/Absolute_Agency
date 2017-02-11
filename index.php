@@ -3,15 +3,15 @@
     include_once "header.php";   
 ?>
 
-    <div class="video-introduction">
-        <video class="index-video" autoplay loop muted>
+        <!--<video class="index-video" autoplay loop muted>
             <source src="images/absoluteImages.m4v" type="video/mp4">
-        </video>
-        <div class="video-gradient-layer"></div>
+        </video>-->
+        <div class="homeImageA"></div>
+        <!--<div class="video-gradient-layer"></div>-->
+        
         <div class="introduction-section">
-            <img class="absolute-logo" src="images/absolute_logo.png" alt="absolute logo">
-            <br>
-            <h2>Design-led<br>brand communication<br>&amp;digital innovation</h2>
+            <h2 class="h2-grey">Hello, we are <img class="absolute-logo" src="images/absolute_logo.png" alt="absolute logo"></h2>
+            <h3><i>A creative brand &amp; design agency</i></h3>
             <br>
             <p>
                 <a href="#">Looking to improve your brand?</a>
@@ -23,9 +23,14 @@
                 <br>
                 <a class="contact-button" href="#"><strong>Get in touch</strong></a>
             </p>
+        
+        
+        <h3 class="h3-gold missionStatement">Together we get you to where you want to be by forming an absolute alignment of your brand and ambitions.</h2>
+        
         </div>
         <div class="featured-projects">
-            <h3>Featured Projects</h3>
+            <h3 class="dottedBorder">Featured Projects</h3>
+            <br>
             <p>From logo designs to full brand experiences across all marketing.
                 <br>Logo designs to full brand experiences across all marketing. </p>
             <br>
@@ -62,10 +67,12 @@
         <div class="featurebox web">
             
         </div>
-        <div class="clients-section">
-               <h3>Our Clients</h3>
+        <div class="client-section">
+               <h3 class="dottedBorder">Our Clients</h3>
+               <br>
                <p>A selection of some of the people that we've worked with</p>
                <br>
+               <div class="client-continer">
             <?php
 
 				$sql = "SELECT * FROM clients ORDER BY RAND() LIMIT 9";
@@ -81,6 +88,8 @@
 
 			?>
             </div>
-        </div>
+            </div>
+            
+            <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/311a88a2777b567cbeab55daecb341e6.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 
         <?php include_once "footer.php"; ?>
