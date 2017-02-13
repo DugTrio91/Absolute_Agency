@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.10
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Sep 06, 2016 at 09:37 PM
--- Server version: 5.5.42
--- PHP Version: 7.0.0
+-- Generation Time: Feb 13, 2017 at 12:15 PM
+-- Server version: 5.6.28
+-- PHP Version: 7.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -24,7 +24,7 @@ CREATE TABLE `clients` (
   `id` int(11) NOT NULL,
   `colourLogo` varchar(300) CHARACTER SET swe7 NOT NULL,
   `clientName` varchar(300) CHARACTER SET swe7 NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `clients`
@@ -62,7 +62,7 @@ CREATE TABLE `portfoliolist` (
   `aboutDesign` varchar(1000) CHARACTER SET swe7 NOT NULL,
   `finalImage` varchar(500) CHARACTER SET swe7 NOT NULL,
   `workType` varchar(1000) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `portfoliolist`
@@ -70,7 +70,7 @@ CREATE TABLE `portfoliolist` (
 
 INSERT INTO `portfoliolist` (`ID`, `coverImage`, `logo`, `portfolioTitle`, `aboutIntro`, `image2`, `aboutClient`, `image3`, `image4`, `aboutDesign`, `finalImage`, `workType`) VALUES
 (1, '../images/portfolio/Baker_Furniture_Brochure_Design.jpg', '', 'Baker Furniture', '<p><em>Flank t-bone ribeye picanha turducken, frankfurter turkey alcatra venison shank. Fatback strip steak landjaeger short ribs jerky. Landjaeger swine short loin leberkas, boudin pork frankfurter chicken salami ball tip. Rump strip steak tri-tip corned beef pork chop andouille turducken tail shank flank doner picanha pancetta filet mignon pig. Pork loin ham hock short loin short ribs bacon pork. Drumstick sirloin strip steak venison t-bone alcatra. Capicola pig rump frankfurter meatball biltong prosciutto short loin tail cow ribeye beef ribs.</em></p>', '', '<p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>', '', '', '<p>Bacon ipsum dolor amet tenderloin salami strip steak jerky ball tip pork chop, doner spare ribs rump swine corned beef pancetta. Turducken sausage picanha, kevin prosciutto flank pancetta. Beef jerky sausage jowl ham hock short loin bacon kevin pork belly kielbasa turkey cow hamburger. Pork loin frankfurter salami drumstick, short ribs rump tri-tip hamburger pork sausage pastrami kevin cupim tongue.</p>', '', ''),
-(2, '../images/portfolio/Black_Mulberry_Window.jpg', 'http://marksandbox.esy.es/images/Black_Mulberry_logo.png', 'The Black Mulberry', 'Legend has it that the tree was planted during the reign of King James 1 and is over 400 years old. At the time the King was trying to encourage the development of a national silk industry. Sadly the much sought after silk trade never took off as silkworms only feed off the white mulberry tree, leaving this lovely Black Mulberry to enjoy its days standing proudly beside the Weeping Willow watching over the River Nidd.', 'http://marksandbox.esy.es/images/Black_Mulberry_Menu.jpg', 'The <strong>Rascals Cafe</strong> approached us to rename and rebrand their traditional cafe on Knaresbrough Waterside. Situated in a market town rich in history, they wanted a name that had historical and regional relevance. Working with the client we discovered the story of The Black Mulberry.', 'http://marksandbox.esy.es/images/Black_Mulberry_Invitation_Design.jpg', 'http://marksandbox.esy.es/images/Black_Mulberry_Logo_Design-Absolute.jpg', 'We created a contemporary yet rustic feel, that was applied to a suite of marketing materials including the design of menus, loyalty cards, signage and invitations, as well as setting up and managing their social media channels.', 'http://marksandbox.esy.es/images/Black_Mulberry_Loyalty_Card_Design-.jpg', 'branding'),
+(2, '../images/portfolio/Black_Mulberry_Window.jpg', '../images/portfolio/Black_Mulberry_logo.png', 'The Black Mulberry', 'Legend has it that the tree was planted during the reign of King James 1 and is over 400 years old. At the time the King was trying to encourage the development of a national silk industry. Sadly the much sought after silk trade never took off as silkworms only feed off the white mulberry tree, leaving this lovely Black Mulberry to enjoy its days standing proudly beside the Weeping Willow watching over the River Nidd.', 'http://marksandbox.esy.es/images/Black_Mulberry_Menu.jpg', 'The <strong>Rascals Cafe</strong> approached us to rename and rebrand their traditional cafe on Knaresbrough Waterside. Situated in a market town rich in history, they wanted a name that had historical and regional relevance. Working with the client we discovered the story of The Black Mulberry.', 'http://marksandbox.esy.es/images/Black_Mulberry_Invitation_Design.jpg', 'http://marksandbox.esy.es/images/Black_Mulberry_Logo_Design-Absolute.jpg', 'We created a contemporary yet rustic feel, that was applied to a suite of marketing materials including the design of menus, loyalty cards, signage and invitations, as well as setting up and managing their social media channels.', 'http://marksandbox.esy.es/images/Black_Mulberry_Loyalty_Card_Design-.jpg', 'branding'),
 (3, '../images/portfolio/Blagdon_Kitchen_Advert-Absolute.jpg', '0', 'Blagdon Kitchen Design', '', '', '', '', '', '', '', 'design'),
 (4, '../images/portfolio/DraytonPartners_Stationery_Design-Absolute.jpg', '0', 'Drayton Partners', '', '', '', '', '', '', '', 'stationary'),
 (5, '../images/portfolio/E-Book_Covers_Design.jpg', '0', 'James T. Raydel', '', '', '', '', '', '', '', 'illustration'),
@@ -93,7 +93,7 @@ CREATE TABLE `users` (
   `user_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s name, unique',
   `user_password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s password in salted and hashed format',
   `user_email` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'user''s email, unique'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='user data';
 
 --
 -- Dumping data for table `users`
@@ -134,14 +134,14 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `portfoliolist`
 --
 ALTER TABLE `portfoliolist`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index',AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incrementing user_id of each user, unique index', AUTO_INCREMENT=2;
