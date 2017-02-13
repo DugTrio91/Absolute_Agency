@@ -1,5 +1,4 @@
 <?php include_once "../scripts/connector.php"; ?>
-
     <!DOCTYPE html>
     <html lang="en">
 
@@ -16,14 +15,12 @@
                 selector: 'textarea'
             });
         </script>
-
     </head>
 
     <body>
         <div class="admin-container">
             <h3>Create new portfolio page</h3>
             <form action="add-work.php" method="post" enctype="multipart/form-data">
-               
                 <label for="portfolioTitle">Project Name:</label>
                 <input type="text" id="portfolioTitle" name="portfolioTitle" />
                 <br />
@@ -52,13 +49,11 @@
                 <input type="file" id="finalImage" name="finalImage" />
                 <br />
                 <input id="submit" type="submit" name="Add"></input>
-                 <a href="admin-work.php">
-                <p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
+                <a href="admin-work.php">
+                    <p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
                 </a>
             </form>
-
-           
-        </div>
+          </div>
     </body>
 
     </html>
