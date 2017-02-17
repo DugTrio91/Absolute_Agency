@@ -23,7 +23,7 @@
                     
             echo "<div class='portfolio-image-container'>";
 			echo "<a title=\"" . $row["portfolioTitle"] . "\" href=\"casestudy.php?id=" . $row["ID"] . "\">";
-            echo "<img src='" .  substr($row["coverImage"], 3) . "'/>";
+            echo "<img src='" .  $row["coverImage"] . "'/>";
             echo "<div class='portfolio-text-container'>";
             echo "<h4 class='portfolio-text-label'>" . $row["portfolioTitle"] . "</h4></a>";
             echo "</div></div>";

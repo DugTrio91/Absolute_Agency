@@ -20,12 +20,27 @@
     <body>
         <div class="admin-container">
             <h3>Create new portfolio page</h3>
+            <?php
+                if(isset($_GET["error"])){
+                    $error = $_GET["error"];
+                    echo "<p style='color:red'>";
+                    switch($error){
+                        case "file":
+                            echo "There is an error with one of the files you tried to upload";
+                            break;
+                    }
+                    echo "</p>";
+                }
+            ?>
             <form action="add-work.php" method="post" enctype="multipart/form-data">
                 <label for="portfolioTitle">Project Name:</label>
                 <input type="text" id="portfolioTitle" name="portfolioTitle" />
                 <br />
                 <label for="coverImage">Cover Image:</label>
                 <input type="file" id="coverImage" name="coverImage" />
+                <br />
+                <label for="logo">Logo:</label>
+                <input type="file" id="logo" name="logo" />
                 <br />
                 <label for="aboutIntro">Introduction:</label>
                 <textarea id="aboutIntro" name="aboutIntro"></textarea>
@@ -48,7 +63,7 @@
                 <label for="finalImage">Final Image:</label>
                 <input type="file" id="finalImage" name="finalImage" />
                 <br />
-                <input id="submit" type="submit" name="Add"></input>
+                <input id="submit" type="submit" name="add"></input>
                 <a href="admin-work.php">
                     <p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
                 </a>

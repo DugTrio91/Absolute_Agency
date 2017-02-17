@@ -52,8 +52,10 @@
                     <input type="text" id="portfolioTitle" name="portfolioTitle" value="<?php echo $row['portfolioTitle']; ?>" />
                     <br />
                     <label for="coverImage">Cover Image:</label>
-
                     <input type="file" id="coverImage" name="coverImage" />
+                    <br />
+                    <label for="logo">Logo:</label>
+                    <input type="file" id="logo" name="logo" />
                     <br />
                     <label for="aboutIntro">Introduction:</label>
                     <textarea id="aboutIntro" name="aboutIntro">
