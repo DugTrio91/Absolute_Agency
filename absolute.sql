@@ -2,8 +2,8 @@
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 17, 2017 at 02:44 AM
+-- Host: localhost:8889
+-- Generation Time: Feb 18, 2017 at 08:00 PM
 -- Server version: 5.6.28
 -- PHP Version: 7.0.10
 
@@ -80,7 +80,8 @@ INSERT INTO `portfoliolist` (`ID`, `coverImage`, `logo`, `portfolioTitle`, `abou
 (9, 'images/portfolio/Laelia_packaging_concepts.jpg', '0', 'Laelia London', '', '', '', '', '', '', '', 'branding'),
 (10, 'images/portfolio/NCFE-Exhibition-Stand-Design.jpg', '0', 'NCFE', '', '', '', '', '', '', '', 'design'),
 (11, 'images/portfolio/Northgate_Estate_Agents_Website.jpg', '0', 'Northgate Estate Agents', '', '', '', '', '', '', '', 'web'),
-(12, 'images/portfolio/Northgate_To_Let_Board.jpg', '0', 'Northgate Signature', '', '', '', '', '', '', '', 'branding');
+(12, 'images/portfolio/Northgate_To_Let_Board.jpg', '0', 'Northgate Signature', '', '', '', '', '', '', '', 'branding'),
+(13, 'images/portfolio/58a89521b735a3.47881485.jpg', 'images/portfolio/58a89521b7bb45.03166791.png', 'Test', '', 'images/portfolio/58a89521b7c800.14643165.jpg', '', 'images/portfolio/58a89521b7d254.69104021.jpg', 'images/portfolio/58a89521b7def9.84045814.jpg', '', 'images/portfolio/58a89521b7f094.83184161.jpg', 'design');
 
 -- --------------------------------------------------------
 
@@ -139,7 +140,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `portfoliolist`
 --
 ALTER TABLE `portfoliolist`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `users`
 --

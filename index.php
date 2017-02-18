@@ -40,7 +40,7 @@
         echo "<a href=\"casestudy.php?id=" . $row["ID"] . "\">";
         echo "<div class='featured-projects-container'>";
         echo "<div class='portfolio-image-container'>";
-		echo "<img src='" .  substr($row["coverImage"], 3) . "'/>";
+		echo "<img src='" .  $row["coverImage"] . "'/>";
         echo "</div>";
         echo "<h4>" . $row["portfolioTitle"] . "</h4></a>";
         echo "</div>";
