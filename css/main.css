@@ -130,17 +130,35 @@ textarea {
 
 
 /*-----START OF ON SCREEN CONTENT-----*/
+
+/*---------UNIVERSAL STYLES-----------*/
+.top-container{
+    position: fixed;
+    width: 100%;
+    
+}
+.top-image{
+    height: 100vh;
+    opacity: 0.2;
+}
+
+
 img{
     opacity: 0.8;
     transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
 }
 
 img:hover{
     opacity: 1;
 }
 
+.scrolling-content{
+    background-color: #ecf0f1;
+    position: relative;
+    top: 125vh;
+}
+
+/*---------NAVIGATION-----------*/
 header {
     position: fixed;
     z-index: 99;
@@ -154,29 +172,16 @@ header {
     display: block;
     background: url(../images/absolute_logo.png) top right no-repeat;
     background-size: 260%;
-    -webkit-background-size: 260%;
-    -moz-background-size: 260%;
-    -o-background-size: 260%;
     height: 50px;
     width: 330px;
     margin-top: 20px;
     margin-left: -250px;
     padding: 25px 0px 0px 10px;
-    -webkit-transition: background-size 0.1s, margin 0.1s, width 0.1s;
-    -moz-transition: background-size 0.1s, margin 0.1s, width 0.1s;
-    -o-transition: background-size 0.1s, margin 0.1s, width 0.1s;
     transition: background-size 0.1s, margin 0.1s, width 0.1s;
 }
 
 .logo:hover {
     background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    -webkit-transform: translate(5, 5);
-    -moz-transform: translate(5, 5);
-    -o-transform: translate(5, 5);
-    -ms-transform: translate(5, 5);
     transform: translate(5, 5);
     margin: 40px 0px 0px 20px;
     width: 200px;
@@ -234,63 +239,35 @@ header {
 
 
 
-/*--HOME PAGE--*/
-.homeImageA{
+/*--------------INDEX PAGE---------------*/
+.index-image{
     background: url(../images/shutterstock_502775167.jpg) center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
-    width: 100%;
-    height: 100vh;
-    opacity: 0.2;
+
 }
 
-/*video, .video-gradient-layer {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.video-gradient-layer{
-    position: relative;
-    z-index: 2 !important;
-    background-color: white;
-    margin-top:-101vh;
-    height: 103vh;
-    filter: opacity(70%);
-}*/
-
-
+/*--Text in center of the header image--*/
 .introduction-section{
     position: relative;
     text-align: center;
     z-index: 3;
     top:-65vh;
-    color: #111;
 }
 
-.absolute-logo{
-    height:30px;
-}
-.introduction-section a:first-child{
-    margin-right:20px;    
-}
-
+/*--2 links above 'get in touch button'. Wont show on mobile--*/
 .introduction-section a:not(.introduction-section a:last-child){
-    color: #ac8d4f;
     line-height: 20px;
     font-weight: 400;
+    padding: 10px;
 }
 
+/*---Hover effect for 2 links---*/
 .introduction-section a:hover:not(.introduction-section a:last-child){
     padding-bottom: 5px;
     border-bottom: 1.5px #ac8d4f solid;
 }
 
-/*---Get in touch botton---*/
+/*---'Get in touch' botton---*/
 .introduction-section a:last-child{
     padding:15px;
     background-color: #000;
@@ -298,17 +275,13 @@ header {
 }
 
 .introduction-section a:last-child:hover{
-    padding:15px;
     background-color: #ac8d4f;
 }
 
-.mobile-br{
-    display: none;
-}
-
-.missionStatement{
-    padding-top: 600px;
+.mission-statement{
+    text-align: center;
     margin: 0px auto;
+    padding: 50vh 0vh;
     max-width: 600px;
 }
 
@@ -318,8 +291,6 @@ header {
 }
 
 .featured-projects:not(.other-projects){
-    margin-top: -280px;
-    background-color: #ecf0f1;
 
 }
 
@@ -401,21 +372,13 @@ header {
     -o-transition: .3s ease-in-out;
 }
 /*--ABOUT PAGE--*/
-.about-header{
+.about-image{
     background: url(../images/WebImages/IMG_7408.jpg) center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    height: 100vh;
+    background-size: cover;
 }
 .opening-statement{
-    position: relative;
-    z-index: 5;
-    margin-top: -252px;
     padding: 100px 0px;
     text-align: center;
-    background: #dbdbdb; 
     
 }
 .os-container{
@@ -658,9 +621,6 @@ footer hr{
     .introduction-section a:not(.introduction-section a:last-child){
         visibility: hidden;
     }
-    .introduction-section p{
-        margin-top: -60px;
-    }
         
     .logo{
         display: none;
@@ -670,9 +630,6 @@ footer hr{
         height: 25px;
     }
     
-    .mobile-br{
-        display: block;
-    }
     .featured-projects{
         padding-top: 100px;
     }

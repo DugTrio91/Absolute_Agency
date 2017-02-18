@@ -1,5 +1,5 @@
 <?php
-    $title = "Absolute Agency | Our Work";
+    $title = "Absolute Agency | Blog";
     include_once "header.php";
 
     function linkify($title){

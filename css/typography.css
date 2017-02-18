@@ -22,9 +22,7 @@ a {
     text-decoration: none;
     color: #000;
     cursor: pointer;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
+
     transition: all 0.2s ease;
 }
 
@@ -46,26 +44,24 @@ h2{
     color: #d1d3d4;
 }
 
-
-
 h3{
     font-size: 1.8em;
     font-family: Didot;
-}
-.h3-gold{
-    color: #ac8d4f;
     font-style: italic;
+
 }
 
-.dottedBorder{
+.dotted-border{
     background: #fff;
     padding: 30px;
-    max-width: 25%;
+    max-width: 30%;
     outline-style: dotted;
     outline-color: #fff;
     outline-offset: 10px;
     margin: 20px auto;
     opacity: 0.7;
+    font-style: normal;
+
 }
 h4{
     font-size: 1.2em;
@@ -75,8 +71,17 @@ p {
     font-size: 0.9em;
 }
 
+.gold{
+    color: #ac8d4f;
+}
+
 @media only screen and (max-width: 768px) {
     
     h2, h3{
-    font-size: 1.5em;
+        font-size: 1.5em;
+    }
+    
+    .dotted-border{
+        max-width: 50%;
+        
     }
