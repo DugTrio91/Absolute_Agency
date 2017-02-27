@@ -49,6 +49,7 @@
 
         ?> 
     </div>
+    
     <div class="featured-info">
         <h3>Brand focused. Strategy driven. Design-led.</h3>
         <p>Our goal is to create better brands and better businesses.</p>
@@ -56,6 +57,30 @@
     <div class="featurebox brand"> </div>
     <div class="featurebox design"> </div>
     <div class="featurebox web"> </div>
+    
+    <div class="blog-section">
+            <div class="blog-content">
+            <h3 class="dotted-border">Blog</h3>
+            <br>
+            <?php
+
+            $sql = "SELECT * FROM blog ORDER BY id DESC LIMIT 3";
+            $result = mysqli_query($dbconnect, $sql);
+
+            while($row = mysqli_fetch_array($result)){
+
+            echo "<div class='blog-container'>";
+            echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat'>";
+            echo "<h4 class='dotted-border-small'>" . substr($row["title"],0,30) . "...</h4>";
+            echo "</div>";
+            echo "<p class='blog-info'>" . substr($row["description"],0,340) . "...</p>";
+            echo "</div>";         
+            }
+
+            ?> 
+       </div>
+    </div>
+    
     <div class="client-section">
             <h3 class="dotted-border">Our Clients</h3>
             <br>

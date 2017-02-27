@@ -291,7 +291,7 @@ header {
 }
 
 .featured-projects:not(.other-projects){
-
+    background: #d7d7d7;
 }
 
 .featured-projects-container{
@@ -345,32 +345,26 @@ header {
     height: 150px;
     width: 150px;
     margin: 25px;
-    -webkit-background-position: center center !important;
-    -moz-background-position: center center !important;
-    -ms-background-position: center center !important;
-    -o-background-position: center center !important;
     background-position: center center !important;
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    -ms-background-size: contain !important;
-    -o-background-size: contain !important;
     background-size: contain !important;
     -webkit-filter: grayscale(100%);
-    -webkit-transition: .3s ease-in-out;
     -moz-filter: grayscale(100%);
-    -moz-transition: .3s ease-in-out;
+    -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
-    -o-transition: .3s ease-in-out;
+    filter: grayscale(100%);
+    transition: .3s ease-in-out;
 }
 
 .client-image:hover{
     -webkit-filter: grayscale(0%);
-    -webkit-transition: .3s ease-in-out;
     -moz-filter: grayscale(0%);
-    -moz-transition: .3s ease-in-out;
+    -ms-filter: grayscale(0%);
     -o-filter: grayscale(0%);
-    -o-transition: .3s ease-in-out;
+    filter: grayscale(0%);
+    transition: .3s ease-in-out;
 }
+
+
 /*--ABOUT PAGE--*/
 .about-image{
     background: url(../images/WebImages/IMG_7408.jpg) center no-repeat;
@@ -397,16 +391,13 @@ header {
 
 .opening-statement-photo{
     background: url(../images/Absolute-586.jpg) center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
+    background-size: cover;
     -webkit-filter: grayscale(100%);
-    -webkit-transition: .3s ease-in-out;
     -moz-filter: grayscale(100%);
-    -moz-transition: .3s ease-in-out;
+    -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
-    -o-transition: .3s ease-in-out;
+    filter: grayscale(100%);
+    transition: .3s ease-in-out;
     height: 300px;
     width: 300px;
     
@@ -480,7 +471,44 @@ header {
     opacity: 0.9;    
 }
 
+/*-----BLOG PAGE------*/
+.blog-content{
+    padding: 5% 2%;
+    text-align: center;
+}
 
+.blog-image{
+    background-size: cover;
+}
+
+.blog-container{
+    width: 250px;
+    height: 400px;
+    overflow: hidden;
+    background: #e0e3e4;
+    margin: 3%;
+    display: inline-block;
+    vertical-align: top;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.blog-container:hover{
+    opacity: 1;
+}
+
+.blog-container-image{
+    background: url(../images/WebImages/IMG_7388.jpg) center no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 250px;
+}
+
+.blog-info{
+    padding: 15px;
+    text-align: left;
+}
 
 /*--CASE STUDY MENU--*/
 #case-study-menu{
@@ -616,6 +644,19 @@ footer hr{
     filter: opacity(50%);
 }
 
+@media only screen and (max-width: 1073px) {
+ 
+    .client-frame{
+        width: 150px;
+        height: 150px;
+    }
+
+    .client-image{
+        width: 100px;
+        height: 100px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     
     .introduction-section a:not(.introduction-section a:last-child){
@@ -630,9 +671,7 @@ footer hr{
         height: 25px;
     }
     
-    .featured-projects{
-        padding-top: 100px;
-    }
+    
     .opening-statement-photo {
         width: 80%;
     }
@@ -650,8 +689,19 @@ footer hr{
         margin-left: -35px;
     }
     
-    
-    
+    .client-section{
+        padding: 100px 5%;
+    }
+    .client-frame{
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+    }
+
+    .client-image{
+        width: 50px;
+        height: 50px;
+    }
     
     #case-study-menu{
         display: none;
