@@ -20,7 +20,6 @@
             <li><a href="index.php" title="Home">Home</a></li>
             <li><a href="about.php" title="About">About</a></li>
             <li><a href="work.php" title="Work">Work</a></li>
-            <li><a href="services.php" title="Services">Services</a></li>
             <li><a href="blog.php" title="Blog">Blog</a></li>
             <li><a href="contact.php" title="Contact">Contact</a></li>
             <li><hr /></li>

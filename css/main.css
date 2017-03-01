@@ -54,7 +54,7 @@ textarea {
 }
 
 #submit:hover{
-    background-color: #7bddd8;
+    background-color: #b49759;
 }
 
 
@@ -153,9 +153,16 @@ img:hover{
 }
 
 .scrolling-content{
-    background-color: #ecf0f1;
+    background-color: #fafafa;
     position: relative;
     top: 125vh;
+}
+
+.gold-dash{
+    height: 2px;
+    width: 40px;
+    background: #b49759;
+    margin: 0px 0px 20px 40px;
 }
 
 /*---------NAVIGATION-----------*/
@@ -281,7 +288,7 @@ header {
 .mission-statement{
     text-align: center;
     margin: 0px auto;
-    padding: 50vh 0vh;
+    padding: 50vh 5vw;
     max-width: 600px;
 }
 
@@ -298,33 +305,47 @@ header {
     display: inline-block;
 }
 
-.featured-info{
-    text-align: center;
-    color: #fff;
-    background: #7bddd8;
-    height: 200px;
-    padding: 30px;
+.services{
+    background: #fff;
+    padding-top: 50px;
 }
 
 .featurebox{
-    height: 400px;
-    width:33.33%;
+    height: 400px !important;
+    width:50%;
     display: inline-block;
-    margin-right: -4px;
+    vertical-align: top;
+    margin-left: -2.5px;
 }
 
 .brand{
-   background: #ebebeb; 
+    background: url(../images/branding.png) center no-repeat;
+    background-size: cover;
 }
 
 .design{
-    background: #f0d6a1;
+    background: url(../images/design.png) center no-repeat;
+    background-size: cover;
 }
 
 .web{
-    background: #8a8a8a;
+    background: url(../images/web.png) center no-repeat;
+    background-size: cover;
 }
 
+.team{
+    background: url(../images/team.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.fb-inner-text{
+    height: inherit;
+    padding: 30px;
+}
+
+.mobile{
+    display: none;
+}
 .client-section{
     background: #dbdbdb;
     text-align: center;
@@ -479,10 +500,17 @@ header {
 
 .blog-image{
     background-size: cover;
+    height: 90vh !important;
+    margin-top: 5vh;
+}
+
+.blog-top{
+    width: 94%;
+    margin-left: 3%;
 }
 
 .blog-container{
-    width: 250px;
+    width: 300px;
     height: 400px;
     overflow: hidden;
     background: #e0e3e4;
@@ -502,12 +530,30 @@ header {
     background: url(../images/WebImages/IMG_7388.jpg) center no-repeat;
     background-size: cover;
     height: 150px;
-    width: 250px;
 }
 
 .blog-info{
     padding: 15px;
     text-align: left;
+}
+
+.blog-text{
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 0px 5%;
+    line-height: 1.5;
+}
+
+.description{
+    text-align: left;
+}
+
+#share-buttons img {
+    width: 35px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
 }
 
 /*--CASE STUDY MENU--*/
@@ -671,6 +717,32 @@ footer hr{
         height: 25px;
     }
     
+    .featurebox{
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .brand, .design, .web, .team{
+        height: 200px !important;
+    }
+    
+    .textbox{
+        height: 350px;
+    }
+    
+    .gold-dash{
+        margin: 20px auto;
+    }
+    
+    .mobile{
+        display: block
+    }
+    
+    .desktop{
+        display: none;
+    }
     
     .opening-statement-photo {
         width: 80%;

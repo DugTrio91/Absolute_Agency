@@ -49,14 +49,68 @@
 
         ?> 
     </div>
-    
-    <div class="featured-info">
-        <h3>Brand focused. Strategy driven. Design-led.</h3>
-        <p>Our goal is to create better brands and better businesses.</p>
+    <div class="services">
+        <h3 class="dotted-border">Services</h3>
+        <br>
+        <div class="featurebox brand"> </div>
+        <div class="featurebox">
+            <div class="fb-inner-text">
+                <h2>Branding</h2>
+                <div class="gold-dash"></div>
+                <p>Whether you are a furniture retailer with an ambition to become a household name, a recruitment company aiming to hit their height in head hunting, or an awarding organisation with a desire to rise to the top of the class, we’ll get you to where you want to be. We build distinctive, authentic brands that set out what you want to achieve.</p>
+                <br>
+                <p class="faded">Brand consultancy | Brand development | Brand styling | Brand strategy</p>
+            </div>
+        </div>
+        <div class="featurebox desktop">
+            <div class="fb-inner-text">
+                <h2>Design</h2>
+                <div class="gold-dash"></div>
+                <p>From brochures to exhibition stands we can make your business irresistible through strategic design. With a combined experience of over 30 years working with cross-channel marketing mediums, we are experts in creating a unique experience that authentically represents your business and will resonate with your target audience.</p>
+                <br>
+                <p class="faded">Logo | Brochure | Exhibition stands | Office interiors | Direct mail | Press advertising</p>
+            </div>
+        </div>
+        <div class="featurebox design"> </div>
+        <div class="featurebox mobile">
+            <div class="fb-inner-text">
+                <h2>Design</h2>
+                <div class="gold-dash"></div>
+                <p>From brochures to exhibition stands we can make your business irresistible through strategic design. With a combined experience of over 30 years working with cross-channel marketing mediums, we are experts in creating a unique experience that authentically represents your business and will resonate with your target audience.</p>
+                <br>
+                <p class="faded">Logo | Brochure | Exhibition stands | Office interiors | Direct mail | Press advertising</p>
+            </div>
+        </div>
+        <div class="featurebox web"> </div>
+        <div class="featurebox">
+            <div class="fb-inner-text">
+                <h2>Web</h2>
+                <div class="gold-dash"></div>
+                <p>Your online presence is more important than ever, not only does it need to represent your brand, it needs to be practical in order to accomplish your business objectives. That’s why we take time to understand your business goals and design everything with the end user in mind. Making it easier for your prospective customers to do business with you.</p>
+                <br>
+                <p class="faded">Responsive web design | Web development | SEO | Social Media | Email marketing</p>
+            </div>
+        </div>
+        <div class="featurebox desktop">
+            <div class="fb-inner-text">
+                <h2>Team work</h2>
+                <div class="gold-dash"></div>
+                <p>We believe that success lies in collaboration, and bringing together the best team for your project. We partner with many specialists across the communications spectrum:</p>
+                <br>
+                <p class="faded">Marketers, Photographers, Stylists, Web Developers, Copywriters, Social Media and SEO Experts.</p>
+            </div>
+        </div>
+        <div class="featurebox team"> </div>
+        <div class="featurebox mobile">
+            <div class="fb-inner-text">
+                <h2>Team work</h2>
+                <div class="gold-dash"></div>
+                <p>We believe that success lies in collaboration, and bringing together the best team for your project. We partner with many specialists across the communications spectrum:</p>
+                <br>
+                <p class="faded">Marketers, Photographers, Stylists, Web Developers, Copywriters, Social Media and SEO Experts.</p>
+            </div>
+        </div>
     </div>
-    <div class="featurebox brand"> </div>
-    <div class="featurebox design"> </div>
-    <div class="featurebox web"> </div>
     
     <div class="blog-section">
             <div class="blog-content">
@@ -69,12 +123,12 @@
 
             while($row = mysqli_fetch_array($result)){
 
-            echo "<div class='blog-container'>";
+            echo "<a class='blog-container' href='blog-post.php?id=" . $row["id"] . "'>";
             echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat'>";
             echo "<h4 class='dotted-border-small'>" . substr($row["title"],0,30) . "...</h4>";
             echo "</div>";
             echo "<p class='blog-info'>" . substr($row["description"],0,340) . "...</p>";
-            echo "</div>";         
+            echo "</a>";         
             }
 
             ?> 

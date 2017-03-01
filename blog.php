@@ -7,7 +7,7 @@
         return str_replace(" ", "-", $lower) . ".php";
     }    
 ?>
-    <div class="top-container">
+    <div class="top-container blog-top">
         <?php
 
         $sql = "SELECT * FROM blog ORDER BY id DESC LIMIT 1";
