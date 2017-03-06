@@ -153,7 +153,7 @@ img:hover{
 }
 
 .scrolling-content{
-    background-color: #fafafa;
+    background-color: #fff;
     position: relative;
     top: 125vh;
 }
@@ -298,7 +298,7 @@ header {
 }
 
 .featured-projects:not(.other-projects){
-    background: #d7d7d7;
+    background: #ebebeb;
 }
 
 .featured-projects-container{
@@ -339,6 +339,8 @@ header {
 }
 
 .fb-inner-text{
+    position: relative;
+    top: calc(50% - 150px);
     height: inherit;
     padding: 30px;
 }
@@ -510,7 +512,8 @@ header {
 }
 
 .blog-container{
-    width: 300px;
+    max-width: 300px;
+    width: 90%;
     height: 400px;
     overflow: hidden;
     background: #e0e3e4;
@@ -670,19 +673,27 @@ header {
 /*----FOOTER SECTION-----*/
 
 footer{
-    min-height: 300px;
-    background: #252525;
+    background: #f5f5f5;
+}
+
+.newsletter-container{
+    padding: 20px 20px 0px 20px
+}
+
+.newsletter-container input{
+    background: #fff;
+    width: 90%;
+    max-width: 400px;
+    margin-top: -50px;
+    font-family: Questa;
+    font-style: normal;
 }
 
 .footer-container{
     width: 30%;
     display: inline-block;
     vertical-align: top;
-}
-
-footer p{
-    color: #f5f5f5;
-    padding: 20px;
+    padding: 10px;
 }
 
 footer hr{
@@ -723,7 +734,7 @@ footer hr{
         margin: 0;
         text-align: center;
     }
-    
+
     .brand, .design, .web, .team{
         height: 200px !important;
     }
@@ -743,6 +754,13 @@ footer hr{
     .desktop{
         display: none;
     }
+    
+    .fb-inner-text{
+        position: relative;
+        top: 0px;
+        height: inherit;
+        padding: 30px;
+}
     
     .opening-statement-photo {
         width: 80%;
@@ -804,5 +822,8 @@ footer hr{
     .footer-container{
         width: 80%;
     }
-   
+    
+    .newsletter-container input:last-child{
+        margin: 10px auto;
+    }
 }

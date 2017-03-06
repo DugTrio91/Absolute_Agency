@@ -24,7 +24,7 @@
     <h3 class="gold mission-statement">"Together we get you to where you want to be by forming an absolute alignment of your brand and ambitions"</h3>
         
     <div class="featured-projects">
-        <h3 class="dotted-border">Featured Projects</h3>
+        <h3 class="dotted-border-white">Featured Projects</h3>
         <br>
         <p>From logo designs to full brand experiences across all marketing.
         <br>Logo designs to full brand experiences across all marketing. </p>
@@ -111,6 +111,27 @@
             </div>
         </div>
     </div>
+    <br>
+    
+    <div class="client-section">
+            <h3 class="dotted-border-white">Our Clients</h3>
+            <br>
+            <p>A selection of some of the people that we've worked with</p>
+            <br>
+            <div class="client-continer">
+                <?php
+
+				$sql = "SELECT * FROM clients ORDER BY RAND() LIMIT 9";
+				$result = mysqli_query($dbconnect, $sql);
+
+                while($row = mysqli_fetch_array($result)){
+                    echo "<div class=\"client-frame\">";
+                    echo "<div class=\"client-image\" style=\"background:url(" .  substr($row["colourLogo"], 3) . ") no-repeat\"></div>";
+                    echo "</div>";
+				}
+
+			?> </div>
+        </div>
     
     <div class="blog-section">
             <div class="blog-content">
@@ -127,7 +148,7 @@
             echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat'>";
             echo "<h4 class='dotted-border-small'>" . substr($row["title"],0,30) . "...</h4>";
             echo "</div>";
-            echo "<p class='blog-info'>" . substr($row["description"],0,340) . "...</p>";
+            echo "<p class='blog-info'>" . substr($row["description"],3,340) . "...</p>";
             echo "</a>";         
             }
 
@@ -135,27 +156,7 @@
        </div>
     </div>
     
-    <div class="client-section">
-            <h3 class="dotted-border">Our Clients</h3>
-            <br>
-            <p>A selection of some of the people that we've worked with</p>
-            <br>
-            <div class="client-continer">
-                <?php
-
-				$sql = "SELECT * FROM clients ORDER BY RAND() LIMIT 9";
-				$result = mysqli_query($dbconnect, $sql);
-
-                while($row = mysqli_fetch_array($result)){
-                    echo "<div class=\"client-frame\">";
-                    echo "<div class=\"client-image\" style=\"background:url(" .  substr($row["colourLogo"], 3) . ") no-repeat\"></div>";
-                    echo "</div>";
-                    
-                    
-				}
-
-			?> </div>
-        </div>
+    
         <!-- LightWidget WIDGET -->
         <script src="//lightwidget.com/widgets/lightwidget.js"></script>
         <iframe src="//lightwidget.com/widgets/311a88a2777b567cbeab55daecb341e6.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
