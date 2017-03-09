@@ -66,14 +66,20 @@
 				}
 			} else {
 				//empty file input
-				$errors++;
+				$file_names[0] = $row["coverImage"];
+                $file_names[1] = $row["logo"];
+                $file_names[2] = $row["image2"];
+                $file_names[3] = $row["image3"];
+                $file_names[4] = $row["image4"];
+                $file_names[5] = $row["finalImage"];
+                
 			}
 		}
 
 		if($errors > 0){
 
 			//one or more of the files has an error
-			header("location: add-work-form.php?error=file");
+			header("location: admin-work-updateform.php?error=file");
 			exit();
 
 		} else {
@@ -108,7 +114,7 @@
 		}
 	} else {
 		//form not posted
-		header("location: add-work-form.php");
+		header("location: admin-work-updateform.php");
 		exit();
 	}
 ?>
@@ -119,13 +125,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/admin.css" />
     <title>Admin Area | Create new work</title>
 </head>
 <body>
     <div class="admin-container">
     	<p>
-    		<h2>Work successfully submitted!</h2><br>
+    		<h2>Work successfully updated!</h2><br>
     		Visitors can now view it on the <a href="../work.php" title="work">work</a> page.
     	</p>
 		<a href="admin-work.php">

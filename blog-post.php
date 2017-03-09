@@ -41,9 +41,9 @@
                 $title = $row["title"];
                 $date = date_create($row["datetime"]);
 
-                echo '<h4 class="blog-text">' . substr($row["summary"],3) . '</h4><br>';
+                echo '<h4 class="blog-text">' . strip_tags($row["summary"],"<b><strong><i><u><br><style>") . '</h4><br>';
                 echo '<p class="faded">' . date_format($date, 'l j F Y') . '</p><br>';
-                echo '<p class="blog-text description">' . substr($row["description"],3) . '</p>';
+                echo '<p class="blog-text description">' . strip_tags($row["description"],'<b><strong><i><u><br><style>') . '</p>';
                 echo '<a href="http://www.facebook.com/sharer.php?u=http://marksandbox.esy.es/Absolute-Agency/" target="_blank">';
                     
                         }
@@ -63,10 +63,10 @@
             while($row = mysqli_fetch_array($result)){
 
             echo "<a class='blog-container' href='blog-post.php?id=" . $row["id"] . "'>";
-            echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat'>";
-            echo "<h4 class='dotted-border-small'>" . substr($row["title"],0,30) . "...</h4>";
+            echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat; background-size: 120%'>";
             echo "</div>";
-            echo "<p class='blog-info'>" . substr($row["description"],0,340) . "...</p>";
+            echo "<div class='blog-info'><h4>" . $row["title"] . "</h4>";
+            echo "<p>" . substr($row["description"],0,240) . "...</p></div>";
             echo "</a>";         
             }
 

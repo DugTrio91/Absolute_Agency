@@ -1,132 +1,145 @@
-<?php include_once "../scripts/connector.php"; ?>
+<?php 
 
-    <!DOCTYPE html>
-    <html lang="en">
+	require "../scripts/connector.php";
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/admin.css" />
-        <title>Admin Area | Edit Page</title>
-        <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-        <script>
-            tinymce.init({
-                selector: 'textarea'
-            });
-        </script>
+	function convertToMegabytes($input){
+		$num = floatval($input);
+		if($num > 0){
+			return $num * 1024 * 1024;
+		}
+	}
 
-    </head>
+	$attempts = 5;
+	$errors = 0;
+	$file_names = array();
 
-    <body>
-        <div class="admin-container">
+	if(isset($_POST["add"])){
 
-            <?php
+		//check files
+		foreach($_FILES as $file){
+			
+			$filesize = $file["size"];
+	
+			if($filesize > 0){
+						
+				$fileerror = $file["error"];
+				$filename = $file["name"];
+				$filetype = strtolower(end(explode(".", $filename)));
+				$filetmp = $file["tmp_name"];
 
-	//if you came here from the update page
-	if(isset($_POST["Update"])){
-    
-        //*get values from the form
-		$id = $_POST["ID"];
-		$logo = $_POST["logo"];
-		$portfolioTitle = $_POST["portfolioTitle"];
-        $coverImage = $_POST["coverImage"];
-		$aboutIntro = $_POST["aboutIntro"];
-		$image2 = $_POST["image2"];
-		$aboutClient = $_POST["aboutClient"];
-        $image3 = $_POST["image3"];
-        $image4 = $_POST["image4"];
-        $aboutDesign = $_POST["aboutDesign"];
-        $finalImage = $_POST["finalImage"];
-        $workType = $_POST["workType"];
-        
-        $target_dir = "../images/portfolio/";
-            $target_file = $target_dir . basename($_FILES["coverImage"]["name"]);
-            $uploadOk = 1;
-            $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-            // Check if image file is a actual image or fake image
-            if(isset($_POST["submit"])) {
-                $check = getimagesize($_FILES["coverImage"]["tmp_name"]);
-                if($check !== false) {
-                    echo "File is an image - " . $check["mime"] . ".";
-                    $uploadOk = 1;
-                } else {
-                    echo "File is not an image.";
-                    $uploadOk = 0;
-                }
-            }
-            // Check if file already exists
-            if (file_exists($target_file)) {
-                echo "Note! This file already exists on the server. ";
-                $uploadOk = 0;
-            }
-            // Check file size
-            if ($_FILES["coverImage"]["size"] > 500000) {
-                echo "Note! Your file is too large. ";
-                $uploadOk = 0;
-            }
-            // Allow certain file formats
-            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-            && $imageFileType != "gif" ) {
-                echo "Note! Only JPG, JPEG, PNG & GIF files are allowed. ";
-                $uploadOk = 0;
-            }
-            // Check if $uploadOk is set to 0 by an error
-            if ($uploadOk == 0) {
-                echo " Your file was not uploaded. ";
-            // if everything is ok, try to upload file
-            } else {
-                if (move_uploaded_file($_FILES["coverImage"]["tmp_name"], $target_file)) {
-                    echo " ";
-                } else {
-                    echo "Note!, there was an error uploading your file.";
-                }
-            }
-        
+				$allowed_file_types = array("jpeg", "jpg", "png");
 
-		//prepare the query to run in the database
+				if(in_array($filetype, $allowed_file_types)){
+					if($fileerror === 0){
 
-		$sql = "UPDATE portfoliolist SET 
-			logo = '$logo', 
-			portfolioTitle = '$portfolioTitle',
-            coverImage = '$target_file',
-			aboutIntro = '$aboutIntro', 
-			image2 = '$image2',
-			aboutClient = '$aboutClient',
-            image3 = '$image3',
-            image4 = '$image4',
-            aboutDesign = '$aboutDesign',
-            finalImage = '$finalImage',
-            workType = '$workType'          
-			WHERE id = '$id'";
-        
-		//run the query
-		$result = mysqli_query($dbconnect, $sql);
+						$maximum_megabytes = 5;
+					    $uploaddir = "../images/portfolio/";
+					    $dbdir = substr($uploaddir, 3);
 
-		//if updated successfully
-		if($result){
-			echo "<h2>Work has now been updated</h2>";
-		} else {
-			//something went wrong
-			echo "Error in Update ";
-			die(mysqli_error($dbconnect));
+						$maximum_file_size = convertToMegabytes($maximum_megabytes);
+						if($filesize <= $maximum_file_size){
+
+							//file has passed checks
+							$filenamenew = uniqid("", true) . "." . $filetype;
+							$destination = $uploaddir . $filenamenew;
+
+							if(move_uploaded_file($filetmp, $destination)){
+
+								//success
+				            	$file_names[] = $dbdir . $filenamenew;
+
+							} else {
+								//upload failed
+								$errors++;
+							}
+						} else {
+						    //file too big
+						    $errors++;
+						}
+					} else {
+					   	//unknown file error
+					    $errors++;
+					}
+				} else {
+					//forbidden file extension
+					$errors++;
+				}
+			} else {
+				//empty file input
+				$file_names[0] = $row["coverImage"];
+                $file_names[1] = $row["logo"];
+                $file_names[2] = $row["image2"];
+                $file_names[3] = $row["image3"];
+                $file_names[4] = $row["image4"];
+                $file_names[5] = $row["finalImage"];
+                
+			}
 		}
 
-	} 
+		if($errors > 0){
+
+			//one or more of the files has an error
+			header("location: admin-work-updateform.php?error=file");
+			exit();
+
+		} else {
+
+			//text fields
+			$portfolioTitle = $_POST["portfolioTitle"];
+			$aboutIntro = $_POST["aboutIntro"];
+			$aboutClient = $_POST["aboutClient"];
+			$aboutDesign = $_POST["aboutDesign"];
+			$workType = "design";
+
+
+
+
+
+
+			//validate text fields here
+
+
+
+
+
+
+
+			//database input
+			$sql = "INSERT INTO portfoliolist (coverImage, logo, portfolioTitle, aboutIntro, image2, aboutClient, image3, image4, aboutDesign, finalImage, workType) VALUES ('$file_names[0]', '$file_names[1]', '$portfolioTitle', '$aboutIntro', '$file_names[2]', '$aboutClient', '$file_names[3]', '$file_names[4]', '$aboutDesign', '$file_names[5]', '$workType')";
+			$result = mysqli_query($dbconnect, $sql);
+
+			if(!$result){
+				die("Error when adding work.<br>" . mysqli_error($dbconnect));
+			}
+		}
+	} else {
+		//form not posted
+		header("location: admin-work-updateform.php");
+		exit();
+	}
 ?>
 
-                <br />
-                <a href="admin-work.php">
-                    <p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
-                </a>
-        </div>
-    </body>
-
-    </html>
-
-    <?php
-
-	//close connection
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+    <title>Admin Area | Create new work</title>
+</head>
+<body>
+    <div class="admin-container">
+    	<p>
+    		<h2>Work successfully updated!</h2><br>
+    		Visitors can now view it on the <a href="../work.php" title="work">work</a> page.
+    	</p>
+		<a href="admin-work.php">
+			<p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
+		</a>
+	</div>
+</body>
+</html>
+<?php
 	mysqli_close($dbconnect);
-
 ?>

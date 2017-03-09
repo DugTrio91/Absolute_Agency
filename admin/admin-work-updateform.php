@@ -92,8 +92,11 @@
                     <input type="file" id="finalImage" name="finalImage" value="<?php echo $row['finalImage']; ?>" />
                     <br />
                     <input type="hidden" id="ID" name="ID" value="<?php echo $row['ID'];?>" />
-
                     <input id="submit" type="submit" name="Update"></input>
+                    <br>
+                    <?php
+                    echo"<a style='color:red' href='deletework.php?id=" . $row["ID"] . "' title='deletework'><i class='fa fa-trash fa-2x'></i></a>";
+                    ?>
                     <a href="admin-work.php">
                         <p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
                     </a>

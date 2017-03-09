@@ -40,5 +40,24 @@
             </p>
         </div>
     </div>
+    <div class="team-section">
+       <h3 class="dotted-border">Meet the team</h3>
+        
+        <?php
+
+            $sql = "SELECT * FROM team ORDER BY id DESC";
+            $result = mysqli_query($dbconnect, $sql);
+
+            while($row = mysqli_fetch_array($result)){
+
+            echo "<div class='team-container'>";
+            echo "<div class='team-image' style='background: url(" . $row["image"] . ") center no-repeat; background-size: cover;'></div><br>";
+            echo "<h4>" . $row["name"] . "</h4>";
+            echo "<p>" . $row["position"] . "</p><br>";
+            echo "</div>"; 
+            }
+
+            ?> 
+        </div>
 
     <?php include_once "footer.php"; ?>

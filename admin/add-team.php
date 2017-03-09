@@ -33,7 +33,7 @@
 					if($fileerror === 0){
 
 						$maximum_megabytes = 5;
-					    $uploaddir = "../images/portfolio/";
+					    $uploaddir = "../images/team/";
 					    $dbdir = substr($uploaddir, 3);
 
 						$maximum_file_size = convertToMegabytes($maximum_megabytes);
@@ -73,18 +73,16 @@
 		if($errors > 0){
 
 			//one or more of the files has an error
-			header("location: add-work-form.php?error=file");
+			header("location: add-team-form.php?error=file");
 			exit();
 
 		} else {
 
 			//text fields
-			$portfolioTitle = $_POST["portfolioTitle"];
-			$aboutIntro = $_POST["aboutIntro"];
-			$aboutClient = $_POST["aboutClient"];
-			$aboutDesign = $_POST["aboutDesign"];
-			$workType = "design";
-
+			$name = $_POST["name"];
+			$position = $_POST["position"];
+			$twitter = $_POST["twitter"];
+            $instagram = $_POST["instagram"];
 
 
 
@@ -99,16 +97,16 @@
 
 
 			//database input
-			$sql = "INSERT INTO portfoliolist (coverImage, logo, portfolioTitle, aboutIntro, image2, aboutClient, image3, image4, aboutDesign, finalImage, workType) VALUES ('$file_names[0]', '$file_names[1]', '$portfolioTitle', '$aboutIntro', '$file_names[2]', '$aboutClient', '$file_names[3]', '$file_names[4]', '$aboutDesign', '$file_names[5]', '$workType')";
+			$sql = "INSERT INTO team (name, image, position, twitter, instagram) VALUES ('$name', '$file_names[0]', '$position', '$twitter', '$instagram')";
 			$result = mysqli_query($dbconnect, $sql);
 
 			if(!$result){
-				die("Error when adding work.<br>" . mysqli_error($dbconnect));
+				die("Error when adding blog post.<br>" . mysqli_error($dbconnect));
 			}
 		}
 	} else {
 		//form not posted
-		header("location: add-work-form.php");
+		header("location: add-team-form.php");
 		exit();
 	}
 ?>
@@ -125,10 +123,10 @@
 <body>
     <div class="admin-container">
     	<p>
-    		<h2>Work successfully submitted!</h2><br>
-    		Visitors can now view it on the <a href="../work.php" title="work">work</a> page.
+    		<h2>Team member successfully added!</h2><br>
+    		Visitors can now see them on the <a href="../about.php" title="about">about</a> page.
     	</p>
-		<a href="admin-work.php">
+		<a href="admin-team.php">
 			<p><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</p>
 		</a>
 	</div>

@@ -9,7 +9,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="css/admin.css" />
 	<title>Admin Area</title>
 
@@ -26,6 +25,9 @@
               </li>
               <li>
                   <a class="admin-task-button admin-clients" href="admin-clients.php"><i class="fa fa-building-o fa-4x" aria-hidden="true"></i><br><p>Clients</p></a>
+              </li>
+              <li>
+                  <a class="admin-task-button admin-clients" href="admin-team.php"><i class="fa fa-users fa-4x" aria-hidden="true"></i><br><p>Team</p></a>
               </li>
               <li>
                   <a class="admin-task-button admin-blog" href="admin-blog.php"><i class="fa fa-pencil-square-o fa-4x" aria-hidden="true"></i><br><p>Blog</p></a>

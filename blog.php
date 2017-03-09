@@ -25,21 +25,21 @@
     <!--To close 'top-container' div in header.php-->
     <div class="scrolling-content">
         <!--Start of scrolling content-->
-        <div class="blog-content">
-            <h3 class="dotted-border">More posts</h3>
+            <div class="blog-content">
+            <h3 class="dotted-border">Blog</h3>
             <br>
             <?php
 
-            $sql = "SELECT * FROM blog ORDER BY id DESC";
+            $sql = "SELECT * FROM blog ORDER BY id DESC LIMIT 3";
             $result = mysqli_query($dbconnect, $sql);
 
             while($row = mysqli_fetch_array($result)){
 
             echo "<a class='blog-container' href='blog-post.php?id=" . $row["id"] . "'>";
-            echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat'>";
-            echo "<h4 class='dotted-border-small'>" . substr($row["title"],0,30) . "...</h4>";
+            echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat; background-size: 120%'>";
             echo "</div>";
-            echo "<p class='blog-info'>" . substr($row["description"],0,340) . "...</p>";
+            echo "<div class='blog-info'><h4>" . $row["title"] . "</h4>";
+            echo "<p>" . substr($row["description"],0,240) . "...</p></div>";
             echo "</a>";         
             }
 

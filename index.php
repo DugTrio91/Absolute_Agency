@@ -5,7 +5,7 @@
 <div class="top-container">
     <div class="top-image index-image"></div>
     <div class="introduction-section">
-        <h2 class="h2-grey">Hello, we are <img class="absolute-logo" src="images/absolute_logo.png" height="30px" alt="absolute logo"></h2>
+        <h2 class="h2-grey">Hello, we are <img src="images/absolute_logo.png" height="30px" alt="absolute logo"></h2>
         <h3><i>A creative brand &amp; design agency</i></h3>
         <br> <span>
                <p>
@@ -107,19 +107,18 @@
                 <div class="gold-dash"></div>
                 <p>We believe that success lies in collaboration, and bringing together the best team for your project. We partner with many specialists across the communications spectrum:</p>
                 <br>
-                <p class="faded">Marketers, Photographers, Stylists, Web Developers, Copywriters, Social Media and SEO Experts.</p>
+                <p class="faded">Marketers | Photographers | Stylists | Web Developers | Copywriters | Social Media and SEO Experts.</p>
             </div>
         </div>
     </div>
     <br>
-    
     <div class="client-section">
             <h3 class="dotted-border-white">Our Clients</h3>
             <br>
             <p>A selection of some of the people that we've worked with</p>
             <br>
             <div class="client-continer">
-                <?php
+            <?php
 
 				$sql = "SELECT * FROM clients ORDER BY RAND() LIMIT 9";
 				$result = mysqli_query($dbconnect, $sql);
@@ -130,8 +129,9 @@
                     echo "</div>";
 				}
 
-			?> </div>
-        </div>
+			?>
+            </div>
+    </div>
     
     <div class="blog-section">
             <div class="blog-content">
@@ -145,14 +145,16 @@
             while($row = mysqli_fetch_array($result)){
 
             echo "<a class='blog-container' href='blog-post.php?id=" . $row["id"] . "'>";
-            echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat'>";
-            echo "<h4 class='dotted-border-small'>" . substr($row["title"],0,30) . "...</h4>";
+            echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat; background-size: 120%'>";
             echo "</div>";
-            echo "<p class='blog-info'>" . substr($row["description"],3,340) . "...</p>";
+            echo "<div class='blog-info'><h4>" . $row["title"] . "</h4>";
+            echo "<p>" . substr($row["description"],0,240) . "...</p></div>";
             echo "</a>";         
             }
 
             ?> 
+            
+            
        </div>
     </div>
     
