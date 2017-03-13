@@ -8,7 +8,7 @@
     }    
 ?>
 
-
+<?php include_once "map.php"; ?>
 
 
 <?php include_once "footer.php"; ?>

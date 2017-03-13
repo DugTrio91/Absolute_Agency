@@ -44,11 +44,16 @@ h2{
     color: #acacab;
 }
 
-h3{
+h3:not(#mapkit-7627){
     font-size: 1.8em;
     font-family: Didot;
     font-style: italic;
 
+}
+
+.md-subhead{
+    font-family: Roboto !important;
+    font-style: normal !important;
 }
 
 .dotted-border-white, .dotted-border-small-white{

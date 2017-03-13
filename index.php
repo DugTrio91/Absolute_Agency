@@ -15,7 +15,7 @@
                 <br>
                 <br>
                 <br>
-                <a class="contact-button" href="#">Get in touch</a>
+                <a class="contact-button" href="contact.php">Get in touch</a>
                 </p>
             </span> 
     </div>
@@ -97,7 +97,7 @@
                 <div class="gold-dash"></div>
                 <p>We believe that success lies in collaboration, and bringing together the best team for your project. We partner with many specialists across the communications spectrum:</p>
                 <br>
-                <p class="faded">Marketers, Photographers, Stylists, Web Developers, Copywriters, Social Media and SEO Experts.</p>
+                <p class="faded">Marketers | Photographers | Stylists | Web Developers | Copywriters | Social Media and SEO Experts.</p>
             </div>
         </div>
         <div class="featurebox team"> </div>
@@ -111,13 +111,12 @@
             </div>
         </div>
     </div>
-    <br>
     <div class="client-section">
             <h3 class="dotted-border-white">Our Clients</h3>
             <br>
             <p>A selection of some of the people that we've worked with</p>
             <br>
-            <div class="client-continer">
+            <div class="client-container">
             <?php
 
 				$sql = "SELECT * FROM clients ORDER BY RAND() LIMIT 9";
