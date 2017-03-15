@@ -9,8 +9,7 @@
         <h3><i>A creative brand &amp; design agency</i></h3>
         <br> <span>
                <p>
-                <a class="gold"href="#">Looking to improve your brand?</a>
-
+                <a class="gold" href="#">Looking to improve your brand?</a>
                 <a class="gold" href="#">Looking to update your website?</a>
                 <br>
                 <br>
@@ -19,19 +18,32 @@
                 </p>
             </span> 
     </div>
-</div><!--To close 'top-container' div in header.php--> 
-<div class="scrolling-content"><!--Start of scrolling content-->
-    <h3 class="gold mission-statement">"Together we get you to where you want to be by forming an absolute alignment of your brand and ambitions"</h3>
+</div><!--To close 'top-container' div in the header.php--> 
+<div class="scrolling-content"><!--Start of scrolling content, closed in the footer.php file-->
+   
+    <h3 class="gold mission-statement">"Together we get you to where you want to be by forming an absolute <u>alignment</u> of your brand and ambitions"</h3>
+       
+    <div id="moving-stars"><!--Star hover effect, on top of the mission statement container-->
+        <div class="little-star top-star" id= "star0"></div><!--Top stars dissapear on devices narrower than 320px-->
+        <div class="little-star top-star" id= "star1"></div>
+        <div class="little-star top-star" id= "star2"></div>
+        <div class="little-star top-star" id= "star3"></div>
+        <div class="little-star" id= "star4"></div>
+        <div class="little-star" id= "star5"></div>
+        <div class="little-star" id= "star6"></div>
+        <div class="little-star" id= "star7"></div>
+    </div>
         
     <div class="featured-projects">
         <h3 class="dotted-border-white">Featured Projects</h3>
         <br>
         <p>From logo designs to full brand experiences across all marketing.
-        <br>Logo designs to full brand experiences across all marketing. </p>
+        <br>Logo designs to full brand experiences across all marketing.</p>
         <br>
-        <br>
+        
+        
     <?php
-
+        //PHP to pull 3 random pieces of work from the 'portfoliolist' database
         $sql = "SELECT * FROM portfoliolist ORDER BY RAND() LIMIT 3";
 		$result = mysqli_query($dbconnect, $sql);
 
@@ -43,8 +55,7 @@
 		echo "<img src='" .  $row["coverImage"] . "'/>";
         echo "</div>";
         echo "<h4>" . $row["portfolioTitle"] . "</h4></a>";
-        echo "</div>";
-                    
+        echo "</div>";           
         }
 
         ?> 
@@ -52,7 +63,7 @@
     <div class="services">
         <h3 class="dotted-border">Services</h3>
         <br>
-        <div class="featurebox brand"> </div>
+        <div class="featurebox brand"></div>
         <div class="featurebox">
             <div class="fb-inner-text">
                 <h2>Branding</h2>
@@ -62,7 +73,7 @@
                 <p class="faded">Brand consultancy | Brand development | Brand styling | Brand strategy</p>
             </div>
         </div>
-        <div class="featurebox desktop">
+        <div class="featurebox desktop"><!--Containers with the 'desktop' tag will vanish on mobile to ensure images and text change from a grid to list-->
             <div class="fb-inner-text">
                 <h2>Design</h2>
                 <div class="gold-dash"></div>
@@ -114,11 +125,11 @@
     <div class="client-section">
             <h3 class="dotted-border-white">Our Clients</h3>
             <br>
-            <p>A selection of some of the people that we've worked with</p>
+            <p>A selection of some of <br> the people that we've worked with</p>
             <br>
             <div class="client-container">
             <?php
-
+                //PHP to pull 9 random clients from the 'clients' database
 				$sql = "SELECT * FROM clients ORDER BY RAND() LIMIT 9";
 				$result = mysqli_query($dbconnect, $sql);
 
@@ -137,7 +148,7 @@
             <h3 class="dotted-border">Blog</h3>
             <br>
             <?php
-
+            //PHP to pull 3 most recent blog posts from the 'blog' database
             $sql = "SELECT * FROM blog ORDER BY id DESC LIMIT 3";
             $result = mysqli_query($dbconnect, $sql);
 
@@ -152,14 +163,12 @@
             }
 
             ?> 
-            
-            
+             
        </div>
     </div>
     
-    
-        <!-- LightWidget WIDGET -->
-        <script src="//lightwidget.com/widgets/lightwidget.js"></script>
-        <iframe src="//lightwidget.com/widgets/311a88a2777b567cbeab55daecb341e6.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+        <h3 class="dotted-border">Instagram</h3>
+        <!--Instagram iframe to Lightwidget -->
+        <script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/a130b8bc40415a9f8f1fa915b4c8ac55.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
         
         <?php include_once "footer.php"; ?>

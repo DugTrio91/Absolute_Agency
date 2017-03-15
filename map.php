@@ -127,7 +127,7 @@
             scaleControl: false,
             scrollwheel: true,
             streetViewControl: false,
-            draggable : true,
+            draggable : false,
             clickableIcons: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             styles: [

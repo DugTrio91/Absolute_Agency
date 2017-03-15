@@ -44,16 +44,17 @@ textarea {
     -moz-resize: none;
 }
 
-#submit{
+#submit, .footer-contact-button{
     width: 130px;
     height: 60px;
-    background-color: #000;
-    color: white;
+    background-color: #c1c2c2;
+    color: #f5f5f5;
     cursor: pointer;
     font-weight: 600;
+    transition: .2s ease-in-out;
 }
 
-#submit:hover{
+#submit:hover, .footer-contact-button:hover{
     background-color: #b49759;
 }
 
@@ -68,9 +69,6 @@ textarea {
     /* right should be negative value of the width */
     background: #222;
     z-index: 98;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
     overflow-y: scroll;
 }
@@ -90,9 +88,6 @@ textarea {
     left: 100px;
     /* value of left is purely for js animation purposes */
     opacity: 0;
-    -webkit-transition: left 0.2s ease, opacity 0.2s ease;
-    -moz-transition: left 0.2s ease, opacity 0.2s ease;
-    -o-transition: left 0.2s ease, opacity 0.2s ease;
     transition: left 0.2s ease, opacity 0.2s ease;
     padding: 10px 0;
     color: #ecf0f1;
@@ -165,7 +160,7 @@ img:hover{
     margin: 0px 0px 20px 40px;
 }
 
-/*---------NAVIGATION-----------*/
+/*---------HEADER-----------*/
 header {
     position: fixed;
     z-index: 99;
@@ -189,7 +184,7 @@ header {
 
 .logo:hover {
     background-size: contain;
-    transform: translate(5, 5);
+    transform: translate(5,5);
     margin: 40px 0px 0px 20px;
     width: 200px;
 }
@@ -204,7 +199,7 @@ header {
     right: 20px;
     
 }
-
+/*---------Hamburger menu-----------*/
 #icon-menu:hover{
     background-color: #ac8d4f;
    
@@ -217,18 +212,12 @@ header {
     background: #fff;
     border-radius: 3px;
     /* border radius should be same as the height */
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -o-border-radius: 3px;
     position: absolute;
     left: 13px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
     transform-origin: left center;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
@@ -285,18 +274,57 @@ header {
     background-color: #ac8d4f;
 }
 
+/*---Tag line and gold stars---*/
 .mission-statement{
     text-align: center;
     margin: 0px auto;
-    padding: 50vh 5vw;
+    padding: 30vh 5vw;
     max-width: 600px;
 }
 
+#moving-stars{
+    position: absolute;
+    height: 65vh;
+    width: 100%;
+    top: 50px;
+    overflow: hidden;
+}
+/*---Universal styles for stars---*/
+.little-star{
+    position: relative;
+    background: url(../images/little-star.png) center no-repeat;
+    background-size: contain;
+    height: 30px;
+    transition: .4s ease-in;
+    filter: opacity(0.6);
+}
+/*---Starting positions of stars---*/
+#star0{top: 10px; left: -190px;}
+#star1{top: 70px; left: -70px;}
+#star2{top: 0px; left: 70px;}
+#star3{top: 25px; left: 200px;}
+#star4{top: 320px; left: -200px;}
+#star5{top: 230px; left: -80px;}
+#star6{top: 240px; left: 60px;}
+#star7{top: 190px; left: 200px;}
+
+/*---Position of stars on hover---*/
+#moving-stars:hover #star0 {top: 120px; left: -80px;}
+#moving-stars:hover #star1 {top: 90px; left: -30px;}
+#moving-stars:hover #star2 {top: 60px; left: 20px;}
+#moving-stars:hover #star3 {top: 30px; left: 70px;}
+#moving-stars:hover #star4 {top: 220px; left: -80px;}
+#moving-stars:hover #star5 {top: 190px; left: -30px;}
+#moving-stars:hover #star6 {top: 160px; left: 20px;}
+#moving-stars:hover #star7 {top: 130px; left: 70px;}
+
+
+/*---Styles for 3 featured projects, also replicated on the case study page under 'other projects'---*/
 .featured-projects, .other-projects{
     text-align: center;
     padding:50px 10px 100px 10px;
 }
-
+/*---Styles not to be applied to 'other projects'---*/
 .featured-projects:not(.other-projects){
     background: #ebebeb;
 }
@@ -305,11 +333,13 @@ header {
     display: inline-block;
 }
 
+/*---Services grid---*/
 .services{
     background: #fff;
     padding-top: 50px;
 }
 
+/*---Universal style for box (split into image and text)---*/
 .featurebox{
     height: 400px !important;
     width:50%;
@@ -318,6 +348,7 @@ header {
     margin-left: -2.5px;
 }
 
+/*---Images for services section---*/
 .brand{
     background: url(../images/branding.png) center no-repeat;
     background-size: cover;
@@ -338,6 +369,7 @@ header {
     background-size: cover;
 }
 
+/*---Text inside services grid---*/
 .fb-inner-text{
     position: relative;
     top: calc(50% - 150px);
@@ -345,9 +377,12 @@ header {
     padding: 30px;
 }
 
+/*---Desktop view shows as IMAGE - TEXT - TEXT - IMAGE. Mobile tags are added to make sure the view changes to IMAGE - TEXT - IMAGE - TEXT in a list---*/
 .mobile{
     display: none;
 }
+
+/*---Container with 9 square grid of clients---*/
 .client-section{
     background: #dbdbdb;
     text-align: center;
@@ -367,6 +402,7 @@ header {
     background: #fff;
     margin: 20px;
 }
+/*--Images are in grey by default--*/
 .client-image{
     height: 120px;
     width: 120px;
@@ -380,7 +416,7 @@ header {
     filter: grayscale(100%);
     transition: .3s ease-in-out;
 }
-
+/*--Images go full colour on hover--*/
 .client-image:hover{
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
@@ -389,7 +425,6 @@ header {
     filter: grayscale(0%);
     transition: .3s ease-in-out;
 }
-
 
 /*--ABOUT PAGE--*/
 .about-image{
@@ -432,16 +467,17 @@ header {
 .team-section{
     text-align: center;
 }
-
+/*--Team images go full colour on hover--*/
 .team-image:hover, .opening-statement-photo:hover{
     -webkit-filter: grayscale(0%);
-    -webkit-transition: .3s ease-in-out;
     -moz-filter: grayscale(0%);
-    -moz-transition: .3s ease-in-out;
+    -ms-filter: grayscale(0%);
     -o-filter: grayscale(0%);
-    -o-transition: .3s ease-in-out;
+    filter: grayscale(0%);
+    transition: .3s ease-in-out;
 }
 
+/*--Universal style for container containine team photos--*/
 .team-container{
     height: 420px;
     width: 300px;
@@ -451,6 +487,7 @@ header {
     display: inline-block;
 }
 
+/*--Styles for team portraits (grey by default)--*/
 .team-image{
     height: 300px;
     -webkit-filter: grayscale(100%);
@@ -461,6 +498,7 @@ header {
     transition: .3s ease-in-out;
 }
 
+/*--Specific text styles--*/
 .team-container h4, .team-container p{
     padding: 0px 20px;
 }
@@ -474,7 +512,6 @@ header {
     padding-bottom: 100px;
     
 }
-
 .portfolio-image-container{
     position: relative;
     z-index: 1;
@@ -500,8 +537,6 @@ header {
     margin-left: 20%;
     opacity: 0;
     transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
 }
 
 .portfolio-text-label{
@@ -585,7 +620,6 @@ header {
     width: 35px;
     padding: 5px;
     border: 0;
-    box-shadow: 0;
     display: inline;
 }
 
@@ -640,10 +674,6 @@ header {
 }
 
 .cover-logo {
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -ms-background-size: contain;
-    -o-background-size: contain;
     background-size: contain;
     border-right: 2px solid #ac8d4f;
 }
@@ -673,10 +703,6 @@ header {
 }
 
 .case-study-container1, .case-study-container2, .case-study-container3-lower, .case-study-container4, .case-study-container5-lower{
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -701,49 +727,35 @@ header {
 
 footer{
     background: #f5f5f5;
-    padding: 2%;
-    text-align: center;
+    padding: 20px 2%;
 }
 
-.newsletter-container{
-    padding: 20px 20px 0px 20px
-}
-
-.newsletter-container input{
+.footer-container input{
     background: #fff;
-    width: 90%;
-    max-width: 400px;
+    width: 80%;
+    max-width: 300px;
     font-family: Questa;
     font-style: normal;
+    margin-top: 0px;
 }
 
 .footer-container{
-    width: 33%;
+    width: 30%;
     display: inline-block;
     vertical-align: top;
+    margin: 1.5%;
 }
 
 footer hr{
-    border: 0.5px solid #f5f5f5;
+    border: 0.5px solid #c1c2c2;
+    padding: 0px 30px;
     filter: opacity(50%);
 }
 
- .mini-nav-mobile{
-    display: none;
-     
-}
 
 @media only screen and (max-width: 1073px) {
     
-    .mini-nav-desktop{
-        display: none;
-    }
-    
-    .mini-nav-mobile{
-        display: block;
-        margin: 15px;
-        line-height: 1.5;
-    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -755,6 +767,15 @@ footer hr{
     .logo{
         display: none;
     }
+    
+    #star0 {top: 110px; left: -80px;}
+    #star1 {top: 80px; left: -30px;}
+    #star2 {top: 50px; left: 20px;}
+    #star3 {top: 20px; left: 70px;}
+    #star4 {top: 220px; left: -80px;}
+    #star5 {top: 190px; left: -30px;}
+    #star6 {top: 160px; left: 20px;}
+    #star7 {top: 130px; left: 70px;}
     
     .featurebox{
         display: block;
@@ -849,13 +870,30 @@ footer hr{
         opacity: 0.9
     }
     
+    footer{
+        text-align: center;
+    }
+    
     .footer-container{
         width: 80%;
-        text-align: center;
-        
+        text-align: center;        
+    }
+    
+    .footer-button{
+        margin-bottom: -10px;
     }
     
     .newsletter-container input:last-child{
         margin: 10px auto;
     }
+}
+
+@media only screen and (max-width: 321px) {
+    #moving-stars{
+        top: 200px;
+    }
+    .top-star{
+        display: none;
+    }
+
 }
