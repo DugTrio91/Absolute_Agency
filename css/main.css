@@ -278,15 +278,15 @@ header {
 .mission-statement{
     text-align: center;
     margin: 0px auto;
-    padding: 30vh 5vw;
+    padding: 300px 5vw;
     max-width: 600px;
 }
 
 #moving-stars{
     position: absolute;
-    height: 65vh;
+    height: 600px;
     width: 100%;
-    top: 50px;
+    top: 0px;
     overflow: hidden;
 }
 /*---Universal styles for stars---*/
@@ -299,24 +299,24 @@ header {
     filter: opacity(0.6);
 }
 /*---Starting positions of stars---*/
-#star0{top: 10px; left: -190px;}
-#star1{top: 70px; left: -70px;}
-#star2{top: 0px; left: 70px;}
-#star3{top: 25px; left: 200px;}
-#star4{top: 320px; left: -200px;}
-#star5{top: 230px; left: -80px;}
-#star6{top: 240px; left: 60px;}
-#star7{top: 190px; left: 200px;}
+#star0{top: 150px; left: -190px;}
+#star1{top: 210px; left: -70px;}
+#star2{top: 130px; left: 70px;}
+#star3{top: 155px; left: 200px;}
+#star4{top: 400px; left: -200px;}
+#star5{top: 310px; left: -80px;}
+#star6{top: 370px; left: 60px;}
+#star7{top: 280px; left: 200px;}
 
 /*---Position of stars on hover---*/
-#moving-stars:hover #star0 {top: 120px; left: -80px;}
-#moving-stars:hover #star1 {top: 90px; left: -30px;}
-#moving-stars:hover #star2 {top: 60px; left: 20px;}
-#moving-stars:hover #star3 {top: 30px; left: 70px;}
-#moving-stars:hover #star4 {top: 220px; left: -80px;}
-#moving-stars:hover #star5 {top: 190px; left: -30px;}
-#moving-stars:hover #star6 {top: 160px; left: 20px;}
-#moving-stars:hover #star7 {top: 130px; left: 70px;}
+#moving-stars:hover #star0 {top: 210px; left: -80px;}
+#moving-stars:hover #star1 {top: 180px; left: -30px;}
+#moving-stars:hover #star2 {top: 150px; left: 20px;}
+#moving-stars:hover #star3 {top: 120px; left: 70px;}
+#moving-stars:hover #star4 {top: 320px; left: -80px;}
+#moving-stars:hover #star5 {top: 290px; left: -30px;}
+#moving-stars:hover #star6 {top: 260px; left: 20px;}
+#moving-stars:hover #star7 {top: 230px; left: 70px;}
 
 
 /*---Styles for 3 featured projects, also replicated on the case study page under 'other projects'---*/
@@ -768,15 +768,15 @@ footer hr{
         display: none;
     }
     
-    #star0 {top: 110px; left: -80px;}
-    #star1 {top: 80px; left: -30px;}
-    #star2 {top: 50px; left: 20px;}
-    #star3 {top: 20px; left: 70px;}
-    #star4 {top: 220px; left: -80px;}
-    #star5 {top: 190px; left: -30px;}
-    #star6 {top: 160px; left: 20px;}
-    #star7 {top: 130px; left: 70px;}
+    #star0 {top: 210px; left: -80px;}
+    #star1 {top: 180px; left: -30px;}
+    #star2 {top: 150px; left: 20px;}
+    #star3 {top: 120px; left: 70px;}
+
     
+    .bottom-star{
+        display: none;
+    }
     .featurebox{
         display: block;
         width: 100%;
@@ -889,11 +889,8 @@ footer hr{
 }
 
 @media only screen and (max-width: 321px) {
-    #moving-stars{
-        top: 200px;
-    }
-    .top-star{
-        display: none;
+
+    
     }
 
 }

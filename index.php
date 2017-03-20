@@ -25,13 +25,13 @@
        
     <div id="moving-stars"><!--Star hover effect, on top of the mission statement container-->
         <div class="little-star top-star" id= "star0"></div><!--Top stars dissapear on devices narrower than 320px-->
-        <div class="little-star top-star" id= "star1"></div>
-        <div class="little-star top-star" id= "star2"></div>
-        <div class="little-star top-star" id= "star3"></div>
-        <div class="little-star" id= "star4"></div>
-        <div class="little-star" id= "star5"></div>
-        <div class="little-star" id= "star6"></div>
-        <div class="little-star" id= "star7"></div>
+        <div class="little-star" id= "star1"></div>
+        <div class="little-star" id= "star2"></div>
+        <div class="little-star" id= "star3"></div>
+        <div class="little-star bottom-star" id= "star4"></div>
+        <div class="little-star bottom-star" id= "star5"></div>
+        <div class="little-star bottom-star" id= "star6"></div>
+        <div class="little-star bottom-star" id= "star7"></div>
     </div>
         
     <div class="featured-projects">
