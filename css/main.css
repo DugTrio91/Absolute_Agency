@@ -723,6 +723,15 @@ header {
     height: 70vh;
     width: 100%
 }
+
+.contact-area{
+    background: #fff;
+}
+
+.contact-form{
+    max-width: 40%;
+    text-align: right !important;
+}
 /*----FOOTER SECTION-----*/
 
 footer{

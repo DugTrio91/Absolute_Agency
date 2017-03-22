@@ -125,7 +125,7 @@
             disableDoubleClickZoom: true,
             mapTypeControl: false,
             scaleControl: false,
-            scrollwheel: true,
+            scrollwheel: false,
             streetViewControl: false,
             draggable : false,
             clickableIcons: false,

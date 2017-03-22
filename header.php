@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <link rel="stylesheet" href="css/typography.css" />
     <link rel="stylesheet" href="css/main.css" />
     <title><?php echo $title; ?></title>

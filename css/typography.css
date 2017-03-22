@@ -1,16 +1,23 @@
+/*--Make fonts look more comparible to Safari in Chrome and Firefox--*/
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*--Typeface files--*/
+
 @font-face {
     font-family:Questa;
-    src:url(../fonts/Questa_Grande_Regular.otf);
+    src:url(../fonts/QuestaGrande-Regular.woff);
 }
 
 @font-face {
     font-family:Open;
-    src:url(../fonts/OpenSans-Light.ttf);
+    src:url(../fonts/OpenSans-Light.woff);
 }
 
 @font-face {
     font-family:Didot;
-    src:url(../fonts/Didot.ttc);
+    src:url(../fonts/Didot.woff);
 }
 
 
@@ -27,13 +34,15 @@ a {
 }
 
 h1, h2, h3, h4, p{
-    font-weight: 200;
     opacity: 0.7;
+    font-weight: 100;
 }
 
 h2, h4{
     font-family: "Questa", serif;
-    margin-bottom: 20px;  
+    margin-bottom: 20px; 
+    font-weight: 100;
+
 }
 
 h2{
