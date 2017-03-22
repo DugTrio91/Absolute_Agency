@@ -16,25 +16,33 @@ hr {
 /*--FORMS--*/
 form {
     margin: auto;
-    text-align: center;
     max-width: 800px;
     padding-bottom: 100px;
 }
 
 ::-webkit-input-placeholder{
-    color: black;
-    font-style: italic;
+    color: #7a7a7a;
 }
 
 input, textarea {
     width: 75%;
     height: 37px;
-    background: #f5f5f5;
     font-size: 18px;
-    border: none;
-    outline: 0;
     padding: 10px;
     margin: 20px 0px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #7a7a7a;;
+    outline: none;
+    font-family: FontAwesome, Didot;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder{
+    color: #000;
+}
+
+input:focus, textarea:focus{
+    border-bottom: 1px solid #000;   
 }
 
 textarea {
@@ -52,6 +60,7 @@ textarea {
     cursor: pointer;
     font-weight: 600;
     transition: .2s ease-in-out;
+    border: none;
 }
 
 #submit:hover, .footer-contact-button:hover{
@@ -560,69 +569,6 @@ header {
     opacity: 0.9;    
 }
 
-/*-----BLOG PAGE------*/
-.blog-content{
-    padding: 5% 2%;
-    text-align: center;
-}
-
-.blog-image{
-    background-size: cover;
-    height: 90vh !important;
-    margin-top: 5vh;
-}
-
-.blog-top{
-    width: 94%;
-    margin-left: 3%;
-}
-
-.blog-container{
-    max-width: 280px;
-    width: 90%;
-    height: 450px;
-    overflow: hidden;
-    background: #f5f5f5;
-    margin: 15px;
-    display: inline-block;
-    vertical-align: top;
-    opacity: 0.8;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.blog-container:hover{
-    opacity: 1;
-}
-
-.blog-container-image{
-    height: 200px;
-    margin-top: -5px;
-}
-
-.blog-info{
-    padding: 15px;
-    text-align: left;
-}
-
-.blog-text{
-    max-width: 600px;
-    margin: 0px auto;
-    padding: 0px 10%;
-    line-height: 1.5;
-}
-
-.description{
-    text-align: left;
-}
-
-#share-buttons img {
-    width: 35px;
-    padding: 5px;
-    border: 0;
-    display: inline;
-}
-
 /*--CASE STUDY MENU--*/
 #case-study-menu{
     position: absolute;
@@ -686,6 +632,7 @@ header {
 .case-study-container1 {
     height: 100vh !important;
     text-align: center;
+    filter: opacity(0.3)
 }
 
 .splitcontainer-upper {
@@ -700,6 +647,12 @@ header {
 
 .splitcontainer-lower{
     height:500px;    
+}
+
+.case-study-info{
+    text-align: center;
+    height: 100vh;
+    margin-top: -100vh;
 }
 
 .case-study-container1, .case-study-container2, .case-study-container3-lower, .case-study-container4, .case-study-container5-lower{
@@ -717,6 +670,77 @@ header {
     padding:10%;   
 }
 
+.casestudy-contact-form{
+    text-align: center;
+    margin-top: -50px;
+}
+
+#casestudy-captcha{
+    margin-left: 30%;
+}
+
+/*-----BLOG PAGE------*/
+.blog-content{
+    padding: 5% 2%;
+    text-align: center;
+}
+
+.blog-image{
+    background-size: cover;
+    height: 90vh !important;
+    margin-top: 5vh;
+}
+
+.blog-top{
+    width: 94%;
+    margin-left: 3%;
+}
+
+.blog-container{
+    max-width: 280px;
+    width: 90%;
+    height: 450px;
+    overflow: hidden;
+    background: #f5f5f5;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.blog-container:hover{
+    opacity: 1;
+}
+
+.blog-container-image{
+    height: 200px;
+    margin-top: -5px;
+}
+
+.blog-info{
+    padding: 15px;
+    text-align: left;
+}
+
+.blog-text{
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 0px 10%;
+    line-height: 1.5;
+}
+
+.description{
+    text-align: left;
+}
+
+#share-buttons img {
+    width: 35px;
+    padding: 5px;
+    border: 0;
+    display: inline;
+}
 /*-----CONTACT PAGE------*/
 
 #mapkit-7627{
@@ -728,9 +752,23 @@ header {
     background: #fff;
 }
 
+.contact-container{
+    display: inline-block;
+    vertical-align: top;
+}
+
 .contact-form{
-    max-width: 40%;
-    text-align: right !important;
+    width: 50%;
+    margin: 0px 30px;
+}
+
+.contact-details{
+    width: 30%;
+    padding: 0px 5% 5% 5%;
+}
+
+.address{
+    margin-left: 20px;
 }
 /*----FOOTER SECTION-----*/
 
@@ -740,11 +778,8 @@ footer{
 }
 
 .footer-container input{
-    background: #fff;
     width: 80%;
     max-width: 300px;
-    font-family: Questa;
-    font-style: normal;
     margin-top: 0px;
 }
 
@@ -879,6 +914,24 @@ footer hr{
         opacity: 0.9
     }
     
+    #submit{
+        width: 80%;
+    }
+    
+    .contact-area{
+        text-align: center;
+    }
+
+    .contact-form{
+        width: 90%;
+        margin: 5%;
+    }
+    
+    .contact-details{
+        width: 80%;
+        padding-bottom: 100px;
+    }
+    
     footer{
         text-align: center;
     }
@@ -895,11 +948,4 @@ footer hr{
     .newsletter-container input:last-child{
         margin: 10px auto;
     }
-}
-
-@media only screen and (max-width: 321px) {
-
-    
-    }
-
 }
