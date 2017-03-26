@@ -37,7 +37,7 @@
 
                 //cover
                 $out .= "<div id='container1' class='cs-container case-study-container1' style='background: url(" . $row["coverImage"] . ") top no-repeat; background-size: cover;'></div>";
-                $out .= "<div class='case-study-info'><div class='cover cover-logo' style='background: url(" . $row["logo"] . ") center no-repeat; background-size: contain;'></div>";
+                $out .= "<div class='case-study-info'><div class='cover cover-logo' style='background: url(" . $row["logo"] . ") center center no-repeat; background-size: contain;'></div>";
                 $out .= "<div class='cover cover-text'><h2>" . $row["portfolioTitle"] . "</h2></div>";
                 $out .= "</div>";
                 //container2

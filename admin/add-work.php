@@ -32,7 +32,7 @@
 				if(in_array($filetype, $allowed_file_types)){
 					if($fileerror === 0){
 
-						$maximum_megabytes = 5;
+						$maximum_megabytes = 15;
 					    $uploaddir = "../images/portfolio/";
 					    $dbdir = substr($uploaddir, 3);
 

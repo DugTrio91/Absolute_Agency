@@ -22,7 +22,7 @@
 		while($row = mysqli_fetch_array($result)){
                     
 			echo "<a title='" . $row["title"] . "' href='admin-blog-updateform.php?id=" . $row["id"] . "'>";
-            echo "<div class='admin-work-button'><div class='admin-work-thumbnail' style='background: url(../" . $row["image"] . ") center; background-size: cover'></div><h4 class='admin-work-text'>" . $row["title"] . "</h4></div></a>";
+            echo "<div class='admin-work-button'><div class='admin-work-thumbnail' style='background: url(../" . $row["image"] . ") center; background-size: cover'></div><h4 class='admin-work-text'>" . substr($row["title"], 0, 21) . "...</h4></div></a>";
             
         }
     ?> 

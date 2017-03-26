@@ -30,7 +30,7 @@
 	if($result){
 		echo "<div class='admin-container'>
     		<h2>Client successfully deleted!</h2>
-		<a href='admin-client.php'>
+		<a href='admin-clients.php'>
 			<p><i class='fa fa-arrow-left'></i> Back</p>";
 	} else {
 		//if not

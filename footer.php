@@ -4,7 +4,7 @@
         <h4>Newsletter</h4>
         <hr>
         <form action="http://markallendesign.createsend.com/t/d/s/pkyhty/" method="post" id="subForm">
-            <input id="fieldEmail" name="cm-pkyhty-pkyhty" placeholder="&#xf003; Email" type="email" required />
+            <input id="fieldEmail" name="cm-pkyhty-pkyhty" placeholder="&#xf003; Email" type="email" required /><br>
             <input class="footer-button" type="submit" id="submit" value="Subscribe" onClick="Confirm(this.form)">
         </form>
         <!--'Thank You' Pop up for newsletter-->
@@ -36,6 +36,7 @@
     <p>©2017 Absolute | <a href="index.php">Home |</a> <a href="about.php">About |</a> <a href="work.php">Work |</a> <a href="blog.php">Blog |</a> <a href="contact.php">Contact</a> </p>
 </footer>
 <script src="scripts/main.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 </body>
 
 </html>

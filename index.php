@@ -5,15 +5,15 @@
 <div class="top-container">
     <div class="top-image index-image"></div>
     <div class="introduction-section">
-        <h2 class="h2-grey">Hello, we are <img src="images/absolute_logo.png" height="30px" alt="absolute logo"></h2>
+        <h2 class="h2-grey"><span class="desktop">Hello, we are </span><img src="images/absolute_logo.png" height="30px" alt="absolute logo"></h2>
         <h3><i>A creative brand &amp; design agency</i></h3>
         <br> <span>
                <p>
                 <a class="gold" href="#">Looking to improve your brand?</a>
                 <a class="gold" href="#">Looking to update your website?</a>
                 <br>
-                <br>
-                <br>
+                <br class="desktop">
+                <br class="desktop">
                 <a class="contact-button" href="contact.php">Get in touch</a>
                 </p>
             </span> 
@@ -36,9 +36,7 @@
         
     <div class="featured-projects">
         <h3 class="dotted-border-white">Featured Projects</h3>
-        <br>
-        <p>From logo designs to full brand experiences across all marketing.
-        <br>Logo designs to full brand experiences across all marketing.</p>
+        <p>From logo designs to full brand experiences across all marketing. Logo designs to full brand experiences across all marketing.</p>
         <br>
         
         
@@ -52,13 +50,15 @@
         echo "<a href=\"casestudy.php?id=" . $row["ID"] . "\">";
         echo "<div class='featured-projects-container'>";
         echo "<div class='portfolio-image-container'>";
-		echo "<img src='" .  $row["coverImage"] . "'/>";
+		echo "<img src='" .  $row["coverImage"] . "' alt='" . $row["portfolioTitle"] . "'/>";
         echo "</div>";
         echo "<h4>" . $row["portfolioTitle"] . "</h4></a>";
         echo "</div>";           
         }
 
         ?> 
+        <br><br>
+        <h4><a href="work.php">View more...</a></h4>
     </div>
     <div class="services">
         <h3 class="dotted-border">Services</h3>
@@ -134,8 +134,8 @@
 				$result = mysqli_query($dbconnect, $sql);
 
                 while($row = mysqli_fetch_array($result)){
-                    echo "<div class=\"client-frame\">";
-                    echo "<div class=\"client-image\" style=\"background:url(" .  substr($row["colourLogo"], 3) . ") no-repeat\"></div>";
+                    echo "<div class='client-frame'>";
+                    echo "<div class='client-image' style='background:url(" .  substr($row["colourLogo"], 3) . ") no-repeat'></div>";
                     echo "</div>";
 				}
 
@@ -163,8 +163,10 @@
             }
 
             ?> 
-             
+             <br><br>
+        <h4><a href="blog.php">View more...</a></h4>
        </div>
+       
     </div>
     
         <h3 class="dotted-border">Instagram</h3>

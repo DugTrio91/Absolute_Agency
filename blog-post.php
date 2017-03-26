@@ -1,7 +1,12 @@
 <?php
     include_once "header.php"; 
+
+    function linkify($title){
+        $lower = strtolower($title);
+        return str_replace(" ", "-", $lower) . ".php";
+    } 
 ?>
-    <div class="top-container blog-top">
+    <div class="top-container">
         <?php        
 
         $id = $_GET["id"];
@@ -14,18 +19,17 @@
 
                 $title = $row["title"];
 
-                echo '<div class="blog-image" style="background: url(' . $row["image"] . ') center no-repeat; background-size: cover; height: 100vh; opacity: 0.7;"></div>';
-                echo '<div class="introduction-section">';
-                echo '<h3 class ="dotted-border"><i>' . $row["title"] . '</i></h3>'; 
+                echo '<div class="blog-top blog-image" style="background: url(' . $row["image"] . ') center no-repeat; background-size: cover; opacity: 0.7;"></div>';
+                echo '<div class="blog-top blog-title">';
+                echo '<h2><i>' . $row["title"] . '</i></h3>';
+                echo '</div>';
                     
                         }
-        
                     }
-
-    ?> </div>
+    ?> 
+    </div>
     </div>
     <!--To close 'top-container' div in header.php-->
-    <div class="scrolling-content">
         <!--Start of scrolling content-->
         <div class="blog-content">
             <?php        
@@ -57,7 +61,7 @@
                 <br>
                 <?php
 
-            $sql = "SELECT * FROM blog ORDER BY id DESC LIMIT 3";
+            $sql = "SELECT * FROM blog ORDER BY datetime DESC LIMIT 3";
             $result = mysqli_query($dbconnect, $sql);
 
             while($row = mysqli_fetch_array($result)){
@@ -70,5 +74,5 @@
             echo "</a>";         
             }
 
-            ?> </div>
+            ?>
         <?php include_once "footer.php"; ?>
