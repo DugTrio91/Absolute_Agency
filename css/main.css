@@ -86,7 +86,7 @@ input{
     background: #222;
     z-index: 98;
     transition: all 0.2s ease;
-    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #menu a:hover {
