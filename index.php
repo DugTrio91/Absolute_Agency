@@ -144,12 +144,12 @@
     </div>
     
     <div class="blog-section">
-            <div class="blog-content">
+            <div class="blog-content-index">
             <h3 class="dotted-border">Blog</h3>
             <br>
             <?php
             //PHP to pull 3 most recent blog posts from the 'blog' database
-            $sql = "SELECT * FROM blog ORDER BY id DESC LIMIT 3";
+            $sql = "SELECT * FROM blog ORDER BY datetime DESC LIMIT 3";
             $result = mysqli_query($dbconnect, $sql);
 
             while($row = mysqli_fetch_array($result)){
@@ -158,7 +158,7 @@
             echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat; background-size: 120%'>";
             echo "</div>";
             echo "<div class='blog-info'><h4>" . $row["title"] . "</h4>";
-            echo "<p>" . substr($row["description"],0,240) . "...</p></div>";
+            echo "<p>" . substr($row["summary"],0,240) . "...</p></div>";
             echo "</a>";         
             }
 

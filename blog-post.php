@@ -26,13 +26,12 @@
                     
                         }
                     }
-    ?> 
-    </div>
+    ?> </div>
     </div>
     <!--To close 'top-container' div in header.php-->
-        <!--Start of scrolling content-->
-        <div class="blog-content">
-            <?php        
+    <!--Start of scrolling content-->
+    <div class="blog-content">
+        <?php        
 
         $id = $_GET["id"];
         if(isset($id)){
@@ -55,11 +54,12 @@
                     }
 
     ?>
-                <!-- Facebook -->
-                 <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /> </a>
-                <h3 class="dotted-border">More posts</h3>
-                <br>
-                <?php
+            <!-- Facebook -->
+            <br>
+            <a href="https://twitter.com/absolute_hello" title="Twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> | </a>
+            <a href="https://www.facebook.com/absoluteprofile" title="Facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <br>
+            <?php
 
             $sql = "SELECT * FROM blog ORDER BY datetime DESC LIMIT 3";
             $result = mysqli_query($dbconnect, $sql);
@@ -70,9 +70,9 @@
             echo "<div class='blog-container-image' style='background: url("    . $row["image"] . ") center no-repeat; background-size: 120%'>";
             echo "</div>";
             echo "<div class='blog-info'><h4>" . $row["title"] . "</h4>";
-            echo "<p>" . substr($row["description"],0,240) . "...</p></div>";
+            echo "<p>" . substr($row["summary"],0,240) . "...</p></div>";
             echo "</a>";         
             }
 
-            ?>
-        <?php include_once "footer.php"; ?>
+            ?> </div>
+    <?php include_once "footer.php"; ?>

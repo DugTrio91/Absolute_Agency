@@ -386,6 +386,13 @@ header {
     background-size: cover;
 }
 
+
+.blog-content-index{
+    padding: 5% 2%;
+    text-align: center;
+    background-color: #fff;
+}
+
 /*---Text inside services grid---*/
 .fb-inner-text{
     position: relative;
@@ -695,10 +702,11 @@ header {
     text-align: center;
     background-color: #fff;
     position: relative;
-    top: 50vh;
+    top: 55vh;
+    margin-bottom: 55vh;
 }
 .blog-image, .blog-title{
-    height: 50vh;
+    height: 55vh;
     width:60%;
     background: #f5f5f5;
     vertical-align: top;
