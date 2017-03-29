@@ -32,6 +32,7 @@
                 }
             ?>
             <form action="add-work.php" method="post" enctype="multipart/form-data">
+               <p>NOTE: If pasting text from another source, ensure you select "Format" > "Clear Formatting".<br>Failure to do so will result in an error when saving the form</p>
                 <label for="portfolioTitle">Project Name:</label>
                 <input type="text" id="portfolioTitle" name="portfolioTitle" />
                 <br />

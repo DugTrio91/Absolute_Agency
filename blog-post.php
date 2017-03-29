@@ -1,12 +1,9 @@
 <?php
     include_once "header.php"; 
 
-    function linkify($title){
-        $lower = strtolower($title);
-        return str_replace(" ", "-", $lower) . ".php";
-    } 
+
 ?>
-    <div class="top-container">
+    <div class="top-container blog-top">
         <?php        
 
         $id = $_GET["id"];
@@ -29,8 +26,8 @@
     ?> </div>
     </div>
     <!--To close 'top-container' div in header.php-->
-    <!--Start of scrolling content-->
-    <div class="blog-content">
+    <div class="scrolling-content blog-scrolling-content"><!--Start of scrolling content-->
+        <div class="blog-content">
         <?php        
 
         $id = $_GET["id"];
@@ -46,18 +43,19 @@
 
                 echo '<h4 class="blog-text">' . strip_tags($row["summary"],"<b><strong><i><u><br><style>") . '</h4><br>';
                 echo '<p class="faded">' . date_format($date, 'l j F Y') . '</p><br>';
-                echo '<p class="blog-text description">' . strip_tags($row["description"],'<b><strong><i><u><br><style>') . '</p>';
-                echo '<a href="http://www.facebook.com/sharer.php?u=http://marksandbox.esy.es/Absolute-Agency/" target="_blank">';
+                echo '<p class="blog-text description">' . strip_tags($row["description"],'<b><strong><i><u><br><style>') . '</p><br>';
+                
+                //Facebook share button
+                echo '<span><a href="http://www.facebook.com/sharer.php?u=http://marksandbox.esy.es/Absolute-Agency/blog-post.php?id=' . $row["id"] . '" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> |';
+                
+                //Twitter share button
+                echo '<a href="https://twitter.com/share?url=http://marksandbox.esy.es/Absolute-Agency/blog-post.php?id=' . $row["id"] . '&amp;text=' . $row["title"] . '. Read more at: " target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></span><br>';
                     
                         }
         
                     }
 
     ?>
-            <!-- Facebook -->
-            <br>
-            <a href="https://twitter.com/absolute_hello" title="Twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> | </a>
-            <a href="https://www.facebook.com/absoluteprofile" title="Facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
             <br>
             <?php
 

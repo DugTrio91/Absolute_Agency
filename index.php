@@ -9,8 +9,8 @@
         <h3><i>A creative brand &amp; design agency</i></h3>
         <br> <span>
                <p>
-                <a class="gold" href="#">Looking to improve your brand?</a>
-                <a class="gold" href="#">Looking to update your website?</a>
+                <a class="gold" href="#brand">Looking to improve your brand?</a>
+                <a class="gold" href="#web">Looking to update your website?</a>
                 <br>
                 <br class="desktop">
                 <br class="desktop">
@@ -64,7 +64,7 @@
         <h3 class="dotted-border">Services</h3>
         <br>
         <div class="featurebox brand"></div>
-        <div class="featurebox">
+        <div id="brand" class="featurebox">
             <div class="fb-inner-text">
                 <h2>Branding</h2>
                 <div class="gold-dash"></div>
@@ -92,7 +92,7 @@
                 <p class="faded">Logo | Brochure | Exhibition stands | Office interiors | Direct mail | Press advertising</p>
             </div>
         </div>
-        <div class="featurebox web"> </div>
+        <div id="web" class="featurebox web"> </div>
         <div class="featurebox">
             <div class="fb-inner-text">
                 <h2>Web</h2>

@@ -43,9 +43,7 @@
 ?>
                 <h3>Edit <?php echo $title; ?>'s page</h3>
                 <form method="post" action="admin-work-update.php" enctype="multipart/form-data">
-                    <p>NOTE: If pasting text from another source, ensure you select "Format" > "Clear Formatting".
-                        <br>Failure to do so will result in an error when saving the form</p>
-
+                    <p>NOTE: If pasting text from another source, ensure you select "Format" > "Clear Formatting".<br>Failure to do so will result in an error when saving the form</p>
 
                     <label for="portfolioTitle">Project Name:</label>
                     <input type="text" id="portfolioTitle" name="portfolioTitle" value="<?php echo $row['portfolioTitle']; ?>" />

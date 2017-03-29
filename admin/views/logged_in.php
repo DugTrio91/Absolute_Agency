@@ -27,6 +27,9 @@
                   <a class="admin-task-button admin-clients" href="admin-clients.php"><i class="fa fa-building-o fa-4x" aria-hidden="true"></i><br><p>Clients</p></a>
               </li>
               <li>
+                  <a class="admin-task-button admin-clients" href="admin-testimonial.php"><i class="fa fa-commenting fa-4x" aria-hidden="true"></i><br><p>Testimonials</p></a>
+              </li>
+              <li>
                   <a class="admin-task-button admin-clients" href="admin-team.php"><i class="fa fa-users fa-4x" aria-hidden="true"></i><br><p>Team</p></a>
               </li>
               <li>

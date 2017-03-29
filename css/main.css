@@ -32,7 +32,7 @@ input, textarea {
     margin: 20px 0px;
     background: none;
     border: none;
-    border-bottom: 1px solid #7a7a7a;;
+    border-bottom: 1px solid #7a7a7a;
     outline: none;
     font-family: FontAwesome, Didot;
     -webkit-appearance: none !important;
@@ -40,11 +40,11 @@ input, textarea {
 }
 
 input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder{
-    color: #000;
+    color: #222;
 }
 
 input:focus, textarea:focus{
-    border-bottom: 1px solid #000;   
+    border-bottom: 1px solid #222;   
 }
 
 textarea {
@@ -135,11 +135,8 @@ input{
 }
 
 .social-links li a:hover {
-    background: #111;
+    background: #222;
 }
-
-
-
 /*-----START OF ON SCREEN CONTENT-----*/
 
 /*---------UNIVERSAL STYLES-----------*/
@@ -218,7 +215,6 @@ header {
 /*---------Hamburger menu-----------*/
 #icon-menu:hover{
     background-color: #ac8d4f;
-   
 }
 
 #icon-menu span {
@@ -255,7 +251,6 @@ header {
 .index-image{
     background: url(../images/shutterstock_502775167.jpg) center no-repeat;
     background-size: cover;
-
 }
 
 /*--Text in center of the header image--*/
@@ -283,7 +278,7 @@ header {
 /*---'Get in touch' botton---*/
 .introduction-section a:last-child{
     padding:15px;
-    background-color: #000;
+    background-color: #222;
     color: #fff;
 }
 
@@ -341,6 +336,7 @@ header {
     text-align: center;
     padding:50px 10px 100px 10px;
 }
+
 /*---Styles not to be applied to 'other projects'---*/
 .featured-projects:not(.other-projects){
     background: #ebebeb;
@@ -384,13 +380,6 @@ header {
 .team{
     background: url(../images/team.jpg) center no-repeat;
     background-size: cover;
-}
-
-
-.blog-content-index{
-    padding: 5% 2%;
-    text-align: center;
-    background-color: #fff;
 }
 
 /*---Text inside services grid---*/
@@ -450,30 +439,33 @@ header {
     transition: .3s ease-in-out;
 }
 
+/*--3 most recent blog posts on index--*/
+.blog-content-index{
+    padding: 5% 2%;
+    text-align: center;
+    background-color: #fff;
+}
+
 /*--ABOUT PAGE--*/
+
+/*--Image at the top of the About page--*/
 .about-image{
     background: url(../images/WebImages/IMG_7408.jpg) center no-repeat;
     background-size: cover;
 }
+
+/*--Container containing picture of Abbie & Sarah and block of text--*/
 .opening-statement{
     padding: 100px 0px;
-    text-align: center;
-    
+    text-align: center;   
 }
+
 .os-container{
     display: inline-block;
     vertical-align: middle;
 }
 
-.opening-statement-text{
-    width: 50%;
-    max-width: 500px;
-    height: 240px;
-    text-align: left;    
-    padding: 30px;
-    background: #f5f5f5; 
-}
-
+/*--Image of Abbie & Sarah--*/
 .opening-statement-photo{
     background: url(../images/Absolute-586.jpg) center no-repeat;
     background-size: cover;
@@ -484,12 +476,93 @@ header {
     filter: grayscale(100%);
     transition: .3s ease-in-out;
     height: 300px;
-    width: 300px;
-    
+    width: 300px; 
 }
 
+/*--text beside photo, displays as block on mobile--*/
+.opening-statement-text{
+    width: 50%;
+    max-width: 500px;
+    height: 240px;
+    text-align: left;    
+    padding: 30px;
+    background: #f5f5f5; 
+}
+
+/*--Slideshow container, containing testimonials--*/
+.slideshow-container {
+    padding: 30px 10% 70px 10%;
+    background: #ebebeb;
+    text-align: center;
+    line-height: 2;
+    position: relative;
+    transition: 0.6s;
+}
+
+.testimonial {
+    display: none;
+}
+
+/*--Next & previous buttons--*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.prev{
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+      background: #b49759;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 7px;
+  width: 7px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.activedot{
+  background-color: #b49759;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/*--Team images container--*/
 .team-section{
     text-align: center;
+    padding-bottom: 100px;
 }
 /*--Team images go full colour on hover--*/
 .team-image:hover, .opening-statement-photo:hover{
@@ -501,7 +574,7 @@ header {
     transition: .3s ease-in-out;
 }
 
-/*--Universal style for container containine team photos--*/
+/*--Universal style for container containing team photos--*/
 .team-container{
     height: 420px;
     width: 300px;
@@ -581,7 +654,7 @@ header {
 }
 
 .portfolio-image-container:hover .portfolio-text-container{
-    opacity: 0.9;    
+    opacity: 1;    
 }
 
 /*--CASE STUDY MENU--*/
@@ -659,7 +732,7 @@ header {
 
 .splitcontainer-upper p {
     line-height: 35px;
-    max-width: 1000px;
+    max-width: 1222px;
 }
 
 .splitcontainer-lower{
@@ -697,13 +770,19 @@ header {
 }
 
 /*-----BLOG PAGE------*/
+.blog-top{
+    top: 0px;
+}
+
+.blog-scrolling-content{
+    top: 55vh;
+}
+
 .blog-content{
-    padding: 5% 2%;
     text-align: center;
     background-color: #fff;
     position: relative;
-    top: 55vh;
-    margin-bottom: 55vh;
+    padding: 50px 0px;
 }
 .blog-image, .blog-title{
     height: 55vh;
@@ -713,11 +792,16 @@ header {
 }
 
 .blog-title{
-    width: 40%
+    width: 40%;
+
 }
 
 .blog-title h2{
-    padding: 20vh 15%;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 30px;
+
 }
 
 .blog-container{
@@ -928,6 +1012,10 @@ footer hr{
         width: 80%;
     }
     
+    .blog-scrolling-content{
+        top: 100vh;
+    }    
+    
     .blog-image, .blog-title{
         height: 50vh !important;
         width:100%;
@@ -936,12 +1024,8 @@ footer hr{
     
     .blog-title{
         text-align: center;
-        margin-top: -80px;
     }
-    
-    .blog-content{
-        top: 85vh;
-    }
+
     
     .portfolio-text-container{
         background: none;
