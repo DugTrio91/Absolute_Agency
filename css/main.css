@@ -772,6 +772,7 @@ header {
 /*-----BLOG PAGE------*/
 .blog-top{
     top: 0px;
+    display: inline-block;
 }
 
 .blog-scrolling-content{
@@ -793,7 +794,6 @@ header {
 
 .blog-title{
     width: 40%;
-
 }
 
 .blog-title h2{
