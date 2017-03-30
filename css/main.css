@@ -708,10 +708,10 @@ header {
 }
 
 .cover-logo {
-    background-size: contain;
-    max-height: 400px;
-    max-width: 400px;
+    height: 400px;
+    width: 400px;
     border-right: 2px solid #ac8d4f;
+
 }
 
 .cover-text h2 {
