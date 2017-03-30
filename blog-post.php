@@ -46,7 +46,7 @@
                 echo '<p class="blog-text description">' . strip_tags($row["description"],'<b><strong><i><u><br><style>') . '</p><br>';
                 
                 //Facebook share button
-                echo '<span><a href="http://www.facebook.com/sharer.php?u=http://marksandbox.esy.es/Absolute-Agency/blog-post.php?id=' . $row["id"] . '" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> |';
+                echo '<span class="faded"><a href="http://www.facebook.com/sharer.php?u=http://marksandbox.esy.es/Absolute-Agency/blog-post.php?id=' . $row["id"] . '" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> |';
                 
                 //Twitter share button
                 echo '<a href="https://twitter.com/share?url=http://marksandbox.esy.es/Absolute-Agency/blog-post.php?id=' . $row["id"] . '&amp;text=' . $row["title"] . '. Read more at: " target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></span><br>';
